@@ -34,7 +34,7 @@ Saved raw report: `docs/lighthouse-staging.json`. Local production homepage, Lig
 | Best Practices | 100 |
 | SEO | 69 |
 
-LCP 2.5s; total blocking time 160ms; CLS 0.003.003. SEO is intentionally limited by staging robots/noindex protection. Do not remove that protection just to improve the score. Enable indexing only after approved canonical deployment/content review. The full desktop WebGL path was checked separately; mobile Lighthouse uses the lightweight fallback.
+LCP 2.5s; total blocking time 160ms; CLS 0.003. SEO is intentionally limited by staging robots/noindex protection. Do not remove that protection just to improve the score. Enable indexing only after approved canonical deployment/content review. The full desktop WebGL path was checked separately; mobile Lighthouse uses the lightweight fallback.
 
 ## Corrections during QA
 
