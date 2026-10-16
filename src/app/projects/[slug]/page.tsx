@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import { projects } from '@/data/content';
 import { ContactCta, PageIntro } from '@/components/layout';
 import { JsonLd, breadcrumbSchema, pageMetadata } from '@/lib/seo';
+export const dynamicParams = false;
+export function generateStaticParams() { return projects.map(item => ({ slug: item.slug })); }
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const item=projects.find(p=>p.slug===slug);return item?pageMetadata(item.title,item.summary,`/projects/${slug}`):{};}
 export default async function ProjectPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const item=projects.find(p=>p.slug===slug);if(!item)notFound();

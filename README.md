@@ -35,7 +35,7 @@ Home, About, Projects, Services, Journal, Contact, Privacy, custom 404, dynamic 
 - `src/components/sculpture.tsx`: original beveled H geometry; desktop-only, lazy-loaded, DPR capped, stops offscreen/in a hidden tab. CSS sculpture fallback on mobile/reduced motion/unavailable WebGL.
 - `src/components/motion.tsx`: optional progressive GSAP effects; no content hidden before JS runs.
 
-No personal portrait, social links, timeline dates, testimonials, pricing or project outcomes have been invented. The brief's editorial positioning is used, but the requested five services remain unpublished. Replace/expand the biography only with approved facts.
+The owner-supplied portrait is used with an AI-assisted charcoal background and warm lighting edit. No social links, timeline dates, testimonials, pricing or project outcomes have been invented. The brief's editorial positioning is used, but the requested five services remain unpublished. Replace/expand the biography only with approved facts.
 
 ## Inquiry delivery
 
@@ -64,3 +64,9 @@ The privacy page describes current runtime behavior. Before enabling delivery, f
 7. Verify Google Search Console and Bing Webmaster Tools ownership using owner-controlled access. Submit sitemap, inspect representative URLs, monitor indexing, real Core Web Vitals and branded query trends. SEO outcomes are not guaranteed.
 
 No deployment, purchase, email sending, DNS changes or publication has been performed. See `PROGRESS.md` for actual validation and outstanding work. Current filesystem readiness is distinct from environment publication and restoration in another task.
+
+## Portrait and intro update
+
+The homepage uses the owner-supplied portrait, relit to match the dark/orange palette, served as a locally optimized WebP. The photo is also used on About and in Person image metadata. `HeroPortrait` adds restrained fine-pointer parallax. The H sculpture is retained lower on the homepage.
+
+Poppins headings use bold/extra-bold weights. `Intro` plays a brief, nonblocking first-visit loading/reveal sequence once per tab; Replay Intro runs it again. Escape or Tab skips immediately. Reduced-motion mode and JavaScript-disabled views omit the intro. `NavigationLoading` provides inline feedback for genuinely pending navigation without hiding server-rendered content. Published detail slugs are statically gated so drafts retain real 404 responses.

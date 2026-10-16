@@ -13,11 +13,11 @@
 
 ## Validation
 - See QA_REPORT.md for actual commands, pass counts, measurements and limits.
-- Frozen install, lint, typecheck and production build passed; 15 unit tests and 6 browser tests passed. Automated Axe scans passed on all seven informational pages.
+- Frozen install, lint, typecheck and production build passed; 15 unit tests and 7 browser tests passed. Automated Axe scans passed on all seven informational pages.
 - Updated install_script and Next.js start_skill were confirmed saved to the cloud environment draft; publication/restoration are separate and untested.
 
 ## Outstanding owner-controlled content and launch work
-- Supply approved portrait, exact social profile URLs, project roles/status/dates/assets/outcomes, service scopes, original articles and any dated journey facts.
+- Supply exact social profile URLs, project roles/status/dates/assets/outcomes, service scopes, original articles and any dated journey facts.
 - The reference brand screenshot mentioned in the brief was not attached in this turn; colors follow the supplied numeric tokens and described direction.
 - Confirm public contact, recipient/sender, mailbox retention and privacy contact. Configure Resend and shared Redis securely; live email delivery remains unverified.
 - Approve deployment target and domain routing. No deployment, DNS change, purchase or publication has been performed.
@@ -28,3 +28,10 @@
 - Empty collection pages are navigable but noindex; draft detail pages return 404. Rich case-study/service/article templates exist without filler content.
 - No fabricated timeline, portfolio screenshot, testimonial, proficiency score, social link or search-ranking claim.
 - No database, CMS, analytics, CAPTCHA or email subscription.
+
+## Portrait-led cinematic revision
+- Owner supplied and authorized a real portrait; lighting/background edited to charcoal and warm orange. Asset is local WebP and shared with About/Person metadata.
+- Replaced the hero monogram with the portrait; H sculpture remains lower on the page.
+- Bold/extra-bold Poppins, masked staggered headline reveal, first-tab intro animation, replay button and pending-navigation feedback.
+- Intro is skippable by keyboard, does not block interaction, has a hard timeout, and is absent without JS or with reduced motion.
+- No additional project, service, social or biography claims published.

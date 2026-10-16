@@ -14,7 +14,7 @@ Local cloud instance, Node 24.19, Next.js 16.4.2, React 19.3.1, TypeScript 5.9.3
 | `npm test` | 15 passed across 2 files |
 | `npm run build` | Passed; all defined route types compiled |
 | `npm start` | Production startup and functional HTTP/browser requests passed |
-| `npm run test:e2e` | 6 passed; all seven informational pages also passed automated Axe scans |
+| `npm run test:e2e` | 7 passed; all seven informational pages also passed automated Axe scans |
 | `npm audit --omit=dev --audit-level=high --cache /workspace/.npm-cache` | 0 known production dependency vulnerabilities reported |
 
 Unit coverage exercises invalid/injected input, email-provider rejection, missing provider confirmation, shared rate-limit rejection/failure, no-credential mode, identity and safe JSON-LD. Delivery tests use mocks; no real email was sent.
@@ -29,12 +29,12 @@ Saved raw report: `docs/lighthouse-staging.json`. Local production homepage, Lig
 
 | Category | Score |
 |---|---:|
-| Performance | 98 |
+| Performance | 95 |
 | Accessibility | 100 |
 | Best Practices | 100 |
-| SEO | 66 |
+| SEO | 69 |
 
-LCP 2.3s; total blocking time 40ms; CLS 0.003. SEO is intentionally limited by staging robots/noindex protection. Do not remove that protection just to improve the score. Enable indexing only after approved canonical deployment/content review. The full desktop WebGL path was checked separately; mobile Lighthouse uses the lightweight fallback.
+LCP 2.5s; total blocking time 160ms; CLS 0.003.003. SEO is intentionally limited by staging robots/noindex protection. Do not remove that protection just to improve the score. Enable indexing only after approved canonical deployment/content review. The full desktop WebGL path was checked separately; mobile Lighthouse uses the lightweight fallback.
 
 ## Corrections during QA
 
@@ -48,10 +48,18 @@ LCP 2.3s; total blocking time 40ms; CLS 0.003. SEO is intentionally limited by s
 
 - No live Resend/Redis credentials are present. Provider connectivity, real inbox receipt, actual Redis persistence and production mail retention are not verified.
 - No second browser engine is installed/tested. No full manual screen-reader audit or real-device battery/thermal test.
-- No approved portrait, project content, service scopes, article bodies, dated biography or social profiles were provided. Those remain unpublished; detail templates compile but have no real content to validate.
+- No approved project content, service scopes, article bodies, dated biography or social profiles were provided. Those remain unpublished; detail templates compile but have no real content to validate.
 - Staging remains noindex with an empty sitemap. Indexable production settings and Search Console/Bing require owner action after deployment.
 - No deploy, DNS change, publication or external messages performed.
 
 ## Cloud configuration
 
 The updated `install_script` and complete Next.js `start_skill` were confirmed saved to the environment draft. This save does not execute them or publish an environment snapshot. The frozen installation and production startup commands were executed in the current machine. New-task restoration remains untested. Review/save the draft in environment settings and publish the environment snapshot when desired. No network-policy replacement or secret values were saved.
+
+## Portrait-led cinematic revision
+
+The owner supplied a portrait and requested lighting matched to the site, loading animations and bold Poppins. The supplied image received an AI-assisted lighting/background edit and was encoded to an 82KB local WebP. It is used on Home, About and in Person image metadata. The hero uses extra-bold Poppins, staggered reveals and a short once-per-tab intro. Replay, Escape, reduced motion and no-JS behavior are covered by a new browser test. The H sculpture is retained below the hero.
+
+A root route-loading fallback initially interfered with no-JS content rendering; it was replaced with true pending-link indicators. Decorative portrait border overflow was contained. Draft detail slugs are statically gated and continue to return real 404s. All seven production browser tests passed after these corrections; 15 unit tests, lint, typecheck and build also passed. The intro replay test was additionally rerun after strengthening its hydration/first-visit synchronization.
+
+The saved Lighthouse report was refreshed against the portrait-led production build. The final seven-test production rerun passed, including WCAG 2.1 A/AA label checks. A replay button accessible-name mismatch found by Lighthouse was corrected. Staging indexing remains intentionally blocked.

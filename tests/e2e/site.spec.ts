@@ -11,7 +11,7 @@ test('identity, styling, schema and all informational routes render',async({page
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href',`https://hellohabiib.com${path==='/'?'':path}`);
  }
  await page.goto('/');
- await expect(page.locator('h1')).toHaveText('Habibullah');
+ await expect(page.locator('h1')).toContainText('Habibullah');
  expect(await page.locator('body').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(8, 8, 8)');
  const schema=JSON.parse(await page.locator('script[type="application/ld+json"]').innerText());
  expect(schema['@graph'][0].name).toBe('Habibullah');expect(schema['@graph'][0].sameAs).toBeUndefined();
@@ -56,14 +56,32 @@ test('contact validates accessibly and never claims an unconfigured inquiry was 
 });
 
 test('core identity, navigation and static H survive without JavaScript',async({browser})=>{
- const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const page=await context.newPage();await page.goto('/');await expect(page.locator('h1')).toHaveText('Habibullah');await expect(page.getByRole('link',{name:'Explore My Work'})).toBeVisible();await expect(page.locator('.monogram-fallback')).toBeVisible();await page.getByRole('link',{name:'Explore My Work'}).click();await expect(page.locator('h1')).toContainText('Ideas');await context.close();
+ const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const page=await context.newPage();await page.goto('/');await expect(page.locator('h1')).toContainText('Habibullah');await expect(page.getByRole('link',{name:'Explore My Work'})).toBeVisible();await expect(page.locator('.monogram-fallback')).toBeVisible();await page.getByRole('link',{name:'Explore My Work'}).click();await expect(page.locator('h1')).toContainText('Ideas');await context.close();
 });
 
 test('informational routes have no automated WCAG A/AA violations',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
  for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy']){
   await page.goto(path);
-  const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+  const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
   expect(audit.violations,`Accessibility violations on ${path}`).toEqual([]);
  }
+});
+
+
+test('portrait loads and first-visit intro finishes, replays and skips accessibly',async({page})=>{
+ await page.goto('/');
+ await page.waitForFunction(()=>sessionStorage.getItem('habibullah-intro')==='seen');
+ const portrait=page.locator('.hero-portrait img');
+ await expect(portrait).toHaveAttribute('alt','Portrait of Habibullah');
+ await expect(portrait).toHaveJSProperty('complete',true);
+ expect(await portrait.evaluate((image:HTMLImageElement)=>image.naturalWidth)).toBeGreaterThan(0);
+ await expect(page.locator('.intro-overlay')).toBeHidden({timeout:5000});
+ await page.getByRole('button',{name:'Replay intro animation'}).click();
+ await expect(page.locator('.intro-overlay')).toBeVisible();
+ await page.keyboard.press('Escape');
+ await expect(page.locator('.intro-overlay')).toBeHidden();
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await expect(page.getByRole('button',{name:'Replay intro animation'})).toBeHidden();
+ await expect(page.locator('.creative-headline')).toBeVisible();
 });
