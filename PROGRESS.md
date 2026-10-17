@@ -129,3 +129,5 @@
 
 - Replaced the three featured-project count cards with owner-supplied milestones: 2Y Experience, 1,000+ Clients and 50+ Brands helped grow. Kept Nexus founding year, MERN and founder/CEO cards. Adjusted small-screen metric sizing so the longer client total fits.
 - Lint and production build passed. Browser checks verified the exact three new values and no card/page overflow at 320, 390, 768, 1024 and 1440px.
+
+- Updated the milestone heading to “Who am I?” with matching bold 800 weight across the whole heading. Removed dash punctuation in its intro and Nexus milestone title, and changed “Full-stack” to “Full stack” within this section. Production build passed.

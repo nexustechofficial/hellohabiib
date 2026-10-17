@@ -120,7 +120,7 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 
 /* Portrait and confirmed milestones directly after the homepage hero. */
 .milestones-section{position:relative;border-block:1px solid var(--border);background:radial-gradient(ellipse at 8% 0%,#ff481f10,transparent 60%),#101010}
-.milestones-section h2{font-size:clamp(40px,4.5vw,64px);font-weight:800}.milestones-section h2 em{font-style:italic;font-weight:500}
+.milestones-section h2{font-size:clamp(40px,4.5vw,64px);font-weight:800}.milestones-section h2 em{font-style:normal;font-weight:800}
 .milestones-intro{font-size:19px;line-height:1.8;color:#b9b6b7;max-width:850px;margin:24px 0 42px}
 .milestones-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:stretch}.milestones-portrait{position:relative;min-width:0;min-height:620px;border:1px solid #ff795c35;border-radius:22px;overflow:hidden;background:#14100e}
 .milestones-portrait>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 25%}.milestones-caption{position:absolute;bottom:0;inset-inline:0;padding:65px 30px 30px;background:linear-gradient(transparent,#080808ed);display:flex;flex-direction:column;gap:8px}.milestones-caption strong{font-size:27px}.milestones-caption span{font-size:11px;letter-spacing:1.2px;color:#ccc2bd}
