@@ -14,7 +14,11 @@ test('identity, styling, schema and all informational routes render',async({page
  await expect(page.locator('h1')).toContainText('Habibullah');
  expect(await page.locator('body').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(8, 8, 8)');
  const schema=JSON.parse(await page.locator('script[type="application/ld+json"]').innerText());
- expect(schema['@graph'][0].name).toBe('Habibullah');expect(schema['@graph'][0].sameAs).toBeUndefined();
+ expect(schema['@graph'][0].name).toBe('Habibullah');
+ await expect(page.locator('#nexus-tech-pk')).toContainText('Founder & CEO');
+ await expect(page).toHaveTitle(/Habib Ullah.*Nexus Tech PK/);
+ expect(schema['@graph'][0].alternateName).toContain('Habib Ullah');
+ expect(schema['@graph'][1].name).toBe('Nexus Tech PK');expect(schema['@graph'][0].sameAs).toBeUndefined();
  expect(errors).toEqual([]);
 });
 

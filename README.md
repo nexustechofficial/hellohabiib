@@ -82,3 +82,16 @@ Owner-uploaded PNG screenshots are stored unchanged in `public/images/projects/`
 ## Brand and startup services
 
 `src/data/startup.ts` stores nine scoped deliverables, a four-step process and FAQ content shared by the Services landing page and `/services/brand-startup-launch`. The landing page starts with the entrepreneur hero followed by the owner’s portrait and confirmed community-to-brand story. Inquiry links preselect the service in the contact form. No unconfirmed reference prices, age, client counters, reviews or WhatsApp number are published. Delivery still requires the existing contact-provider configuration.
+
+### Name searches and Nexus Tech PK
+
+The owner-confirmed identity is Habibullah (also known as Habib Ullah), Founder & CEO of Nexus Tech PK. Home and About explain the brand relationship visibly; Person and Organization structured data link the founder and brand. No brand domain or social profiles are assumed.
+
+For the live canonical site at `https://hellohabiib.com`:
+
+1. Set `SITE_INDEXABLE=true` in the VPS production environment **before** running `npm run build`. Rebuild and restart the application when changing this flag. Local/staging environments should keep it false.
+2. Verify the live home and About source contains `index, follow`, `/robots.txt` allows public pages, and `/sitemap.xml` lists the canonical HTTPS URLs. Ensure the domain resolves to this deployment with working HTTPS.
+3. Verify domain ownership in Google Search Console, submit `https://hellohabiib.com/sitemap.xml`, and request indexing for the homepage and `/about` with URL Inspection.
+4. Link to this portfolio from your genuine Nexus Tech PK website and verified public profiles, using your real name and role. Supply exact official URLs before adding them to this site’s structured data.
+
+These changes help search engines understand the person and brand; crawling, indexing, ranking and timing remain Google’s decisions. Search Console/DNS configuration is not performed by a code push.

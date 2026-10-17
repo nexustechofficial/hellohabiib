@@ -11,7 +11,7 @@ import { Footer } from '@/components/layout';
 import { isIndexable, siteIdentity } from '@/data/site';
 export const metadata: Metadata = {
   metadataBase: new URL(siteIdentity.canonicalOrigin),
-  title: { default: 'Habibullah | Entrepreneur, Developer & Digital Builder', template: '%s | Habibullah' },
+  title: { default: 'Habib Ullah (Habibullah) | Founder & CEO of Nexus Tech PK', template: '%s | Habibullah' },
   description: siteIdentity.bio,
   robots: { index: isIndexable, follow: true },
   openGraph: { siteName: 'Habibullah', locale: 'en_US', type: 'website', images: ['/opengraph-image'] },

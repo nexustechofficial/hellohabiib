@@ -117,3 +117,10 @@ Lint, TypeScript, 15 unit tests and production build passed. All 9 production br
 ## Homepage tagline update
 
 Updated homepage and default social-preview tagline to “I build what you can imagine.” Preserved the three-line reveal and tuned the longer wording for mobile. Lint, typecheck, 15 unit tests, production build and all 9 browser tests passed. The exact DOM wording and absence of line clipping were separately checked at 320, 360, 390, 768, 1024, 1440 and 1920 pixels.
+
+### Nexus Tech PK founder identity
+
+- Home/About now include a visible Nexus Tech PK founder section; hero, Services and footer identify Habib Ullah as Founder & CEO.
+- Search metadata uses the owner-confirmed alternate spelling; Person and Organization schema link founder and brand without assumed external URLs.
+- Lint, production build, 15 unit tests and 9 Playwright tests passed. Existing automated accessibility checks passed. Home, About and Services fit 320–1440px without horizontal overflow; homepage founder section visually reviewed.
+- Local/staging remains noindex. Production must set SITE_INDEXABLE=true before building and verify live robots/sitemap. No claim of Google indexing or ranking is made.

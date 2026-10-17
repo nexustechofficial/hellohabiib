@@ -95,3 +95,6 @@
 - Owner revised tagline to “I build what you imagine.” Removed CAN and the smaller last-line font override; all three headline lines now inherit one size.
 
 - Increased header navigation, hero name, portfolio label, eyebrow, description, buttons and replay-label sizes in response to owner screenshot; retained equal headline sizes.
+
+- Owner confirmed Habib Ullah / Habibullah is Founder & CEO of Nexus Tech PK. Added a dedicated founder/brand section to Home and About, updated hero, Services, founder story and footer, and linked Person/Organization structured data with the confirmed alternate name. Updated search titles/descriptions. Indexing remains gated for staging; README documents production build-time flag and Search Console steps. No brand URL, financial figures or social profiles invented.
+- Validation: lint and production build passed; all 15 unit tests and 9 browser tests passed, including founder identity/schema and accessibility. Additional Home/About/Services checks confirmed no horizontal overflow at 320, 390, 768, 1024 and 1440px. Visually reviewed the new homepage section. Live indexing and Search Console submission have not been performed.

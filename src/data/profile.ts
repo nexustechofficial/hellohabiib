@@ -1,9 +1,9 @@
 // Based on Habibullah's first-person account. Numbered stages are not dates.
-// Exact brand spelling, financial claims and case-study details await clarification.
+// Founder role and brand spelling are owner-confirmed; financial claims remain unpublished.
 export const personalStory = {
   heading: 'It started with a community.',
   introduction: [
-    'I’m Habibullah, an entrepreneur, developer and digital builder. My journey did not start with an established brand or a finished product. It started with something much simpler: a WhatsApp community.',
+    'I’m Habibullah, also known as Habib Ullah, Founder & CEO of Nexus Tech PK, a developer and digital builder. My journey did not start with an established brand or a finished product. It started with something much simpler: a WhatsApp community.',
     'That community became my starting point. I kept working on it, learning as I went, and gradually building on what I had started. The community grew into Nexus Tech PK, and my own understanding grew alongside it.',
     'The story is still moving forward. Today, I work on my own projects as well as projects for clients. This portfolio is where I’m bringing those experiences together: the work itself, how it came about, and the thinking behind it.',
   ],

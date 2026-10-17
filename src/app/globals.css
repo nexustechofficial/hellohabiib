@@ -69,3 +69,16 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 .replay-intro{font-size:11px}
 @media(max-width:1100px){.desktop-nav{gap:16px}.desktop-nav a{font-size:13px}}
 @media(max-width:540px){.site-header .wordmark{font-size:21px}.hero-cinematic .eyebrow{font-size:10px;letter-spacing:1.1px}.hero-cinematic .hero-name{font-size:21px;flex-wrap:wrap;gap:8px 12px}.hero-name>span{font-size:10px}.hero-cinematic .hero-description{font-size:15px}.hero-actions .button{font-size:12px}.replay-intro{font-size:9px}}
+
+/* Founder identity and the Nexus Tech PK story. */
+.nexus-section{background:radial-gradient(ellipse at 8% 70%,#ff481f0d,transparent 55%),#111;border-block:1px solid var(--border);scroll-margin-top:30px}
+.nexus-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center}
+.nexus-brand{padding:45px 35px;border:1px solid #ff795c40;border-radius:14px;background:linear-gradient(145deg,#221612,#101010)}
+.nexus-brand>p{font-size:clamp(48px,6vw,84px);font-weight:800;letter-spacing:-.06em;line-height:1.08;margin:35px 0}
+.nexus-role{font-size:12px;letter-spacing:1px;color:#ccc2bd}
+.nexus-copy h2{font-size:clamp(32px,3.5vw,50px);margin:22px 0 28px;line-height:1.2}
+.nexus-copy>p{font-size:16px;line-height:1.9;color:#b7b7bf;margin-top:18px}
+.nexus-links{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:22px}.nexus-links .text-link{font-size:14px}
+.nexus-section .eyebrow{font-size:11px;letter-spacing:1.3px}
+@media(max-width:960px){.nexus-grid{gap:35px;grid-template-columns:1fr 1.2fr}.nexus-brand{padding:30px 24px}.nexus-role{font-size:10px}}
+@media(max-width:700px){.nexus-grid{grid-template-columns:1fr;gap:35px}.nexus-brand>p{font-size:60px;margin:25px 0}.nexus-copy>p{font-size:15px}.nexus-section .eyebrow{font-size:10px}.nexus-role{font-size:11px}.nexus-links{flex-direction:column;align-items:flex-start}}
