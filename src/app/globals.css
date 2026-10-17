@@ -113,3 +113,7 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 
 /* Keep contact focused on the form after removing the introductory sidebar. */
 .contact-layout.contact-layout-simple{grid-template-columns:minmax(0,1fr);max-width:900px}.contact-layout-simple .form-footer{justify-content:flex-end}
+
+/* Readable footer typography without duplicate social links. */
+.site-footer .wordmark{font-size:26px}.footer-top p{font-size:16px;line-height:1.8;color:#aaaab1}.footer-links{font-size:16px;gap:12px 28px;min-width:225px}.footer-bottom{font-size:14px;color:#a0a0a7}.footer-bottom>span:nth-child(2){font-size:12px;letter-spacing:1.5px}
+@media(max-width:540px){.footer-top{grid-template-columns:1fr;gap:26px}.site-footer .wordmark{font-size:24px}.footer-links{justify-self:start;font-size:15px;min-width:230px}.footer-bottom{font-size:13px;gap:16px;flex-wrap:wrap}}

@@ -120,3 +120,6 @@
 
 - Removed repeated descriptive filler across Home, About, Projects, Services, social cards and shared contact CTA. Kept substantive founder/project/service details. Contact now has a short title and a centered form, without the explanatory sidebar or intro paragraph; shortened form placeholders, consent and unavailable-delivery notice and removed the mailing-list aside. Delivery status remains honest.
 - Validation: lint, all 15 unit tests, production build and all 9 browser tests passed. Additional Home/About/Projects/Services/Contact checks found no overflow at 320, 768 and 1440px. Visually reviewed the simplified contact page; privacy and validation remain intact.
+
+- Removed duplicate social-profile links from the global footer per owner screenshot. Increased footer navigation and founder text to 16px, copyright/back-to-top to 14px and wordmark to 26px, with a stacked mobile footer and readable 13–15px supporting text. Dedicated personal social section and search schema remain intact.
+- Lint and production build passed. Browser checks at 320, 390, 768, 1024 and 1440px confirmed footer social links are absent, dedicated social cards remain and layouts have no horizontal overflow; computed footer link size is 15px on mobile and 16px otherwise.
