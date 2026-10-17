@@ -117,3 +117,6 @@
 
 - Temporarily removed Journal listing/article routes, all shared navigation links (desktop/mobile/no-JS) and sitemap entries at owner request. Article data/types remain for future restoration; route implementations are recoverable in Git history. Updated README and existing browser expectations to assert Journal is absent and /journal returns 404.
 - Validation: lint and 15 unit tests passed. Initial production build found stale generated dev route types referencing deleted files; moved only the generated .next/dev cache to /tmp and rebuilt successfully. All 9 browser tests passed, including Journal 404, navigation absence and accessibility checks.
+
+- Removed repeated descriptive filler across Home, About, Projects, Services, social cards and shared contact CTA. Kept substantive founder/project/service details. Contact now has a short title and a centered form, without the explanatory sidebar or intro paragraph; shortened form placeholders, consent and unavailable-delivery notice and removed the mailing-list aside. Delivery status remains honest.
+- Validation: lint, all 15 unit tests, production build and all 9 browser tests passed. Additional Home/About/Projects/Services/Contact checks found no overflow at 320, 768 and 1440px. Visually reviewed the simplified contact page; privacy and validation remain intact.
