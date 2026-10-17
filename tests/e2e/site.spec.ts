@@ -27,7 +27,7 @@ test('responsive layout, reduced motion and mobile keyboard menu',async({page})=
  for(const [width,height] of [[360,800],[390,844],[768,1024],[1024,640],[1440,900],[1920,1080]]){
   await page.setViewportSize({width,height});await page.goto('/');
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-  await expect(page.locator('.monogram-fallback')).toBeVisible();
+  await expect(page.locator('.journey-teaser')).toHaveCount(0);
   expect(await page.locator('.sculpture canvas').count()).toBe(0);
  }
  await page.setViewportSize({width:390,height:844});await page.goto('/');
@@ -59,8 +59,8 @@ test('contact validates accessibly and never claims an unconfigured inquiry was 
  expect((await request.post('/api/contact',{headers,data:{...valid,details:'x'.repeat(17000)}})).status()).toBe(413);
 });
 
-test('core identity, navigation and static H survive without JavaScript',async({browser})=>{
- const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const page=await context.newPage();await page.goto('/');await expect(page.locator('h1')).toContainText('Habibullah');await expect(page.getByRole('link',{name:'Explore My Work'})).toBeVisible();await expect(page.locator('.monogram-fallback')).toBeVisible();await page.getByRole('link',{name:'Explore My Work'}).click();await expect(page.locator('h1')).toContainText('Ideas');await context.close();
+test('core identity and navigation survive without JavaScript',async({browser})=>{
+ const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const page=await context.newPage();await page.goto('/');await expect(page.locator('h1')).toContainText('Habibullah');await expect(page.getByRole('link',{name:'Explore My Work'})).toBeVisible();await expect(page.locator('.journey-teaser')).toHaveCount(0);await page.getByRole('link',{name:'Explore My Work'}).click();await expect(page.locator('h1')).toContainText('Ideas');await context.close();
 });
 
 test('informational routes have no automated WCAG A/AA violations',async({page})=>{
