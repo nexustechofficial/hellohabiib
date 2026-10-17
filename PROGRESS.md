@@ -131,3 +131,6 @@
 - Lint and production build passed. Browser checks verified the exact three new values and no card/page overflow at 320, 390, 768, 1024 and 1440px.
 
 - Updated the milestone heading to “Who am I?” with matching bold 800 weight across the whole heading. Removed dash punctuation in its intro and Nexus milestone title, and changed “Full-stack” to “Full stack” within this section. Production build passed.
+
+- Replaced the milestone labels MAR 2024, MY PRODUCT and CLIENT WORK with original brand marks: Nexus Tech PK, Subecta and both Merctra/Elite Jobs Hub. Nexus uses the uploaded logo; project marks are displayed through SVG viewBoxes over owner-provided homepage screenshots, preserving source files and colors. Website downloads were blocked with HTTP 403, so no remote logo dependency was introduced.
+- Lint and production build passed. Browser checks verified four marks, removal of old labels and no overflow at 320, 390, 768 and 1440px. Reviewed desktop/mobile screenshots; automated accessibility check passed across informational routes.

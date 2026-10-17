@@ -1,3 +1,4 @@
+import { MilestoneLogo } from '@/components/milestone-logo';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Arrow } from '@/components/icons';
@@ -23,9 +24,9 @@ export function MilestonesSection() {
         <div className="milestones-content">
           <dl className="milestone-stats">{highlights.map(item => <div key={item.label}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl>
           <ol className="milestone-highlights">
-            <li><span className="milestone-tag">MAR 2024</span><div><h3>Nexus Tech PK: The beginning</h3><p>Founded to make digital products and smart solutions accessible.</p></div></li>
-            <li><span className="milestone-tag">MY PRODUCT</span><div><h3><Link href="/projects/subecta">Subecta<Arrow diagonal /></Link></h3><p>My subscription management platform, built from idea to deployment.</p></div></li>
-            <li><span className="milestone-tag">CLIENT WORK</span><div><h3>Merctra &amp; Elite Jobs Hub</h3><p>Branding, complete website development and deployment.</p></div></li>
+            <li><div className="milestone-logo-group"><MilestoneLogo brand="nexus" /></div><div><h3>Nexus Tech PK: The beginning</h3><p>Founded to make digital products and smart solutions accessible.</p></div></li>
+            <li><div className="milestone-logo-group"><MilestoneLogo brand="subecta" /></div><div><h3><Link href="/projects/subecta">Subecta<Arrow diagonal /></Link></h3><p>My subscription management platform, built from idea to deployment.</p></div></li>
+            <li><div className="milestone-logo-group"><MilestoneLogo brand="merctra" /><MilestoneLogo brand="elite-jobs-hub" /></div><div><h3>Merctra &amp; Elite Jobs Hub</h3><p>Branding, complete website development and deployment.</p></div></li>
           </ol>
           <Link className="text-link" href="/about">More about me<Arrow diagonal /></Link>
         </div>
