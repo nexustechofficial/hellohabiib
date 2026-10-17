@@ -12,6 +12,14 @@ export const siteIdentity = {
   portrait: { src: '/images/habibullah-portrait.webp', width: 1122, height: 1402 } as null | { src: string; width: number; height: number },
   featuredVenture: {
     name: 'Nexus Tech PK',
+    founded: 'March 2024',
+    description: 'Founded in March 2024 by Habib Ullah, Nexus Tech PK makes digital products and smart solutions accessible to everyone, with resources to learn, grow and create.',
+    mission: 'Turning ideas into reality and technology into opportunity.',
+    values: [
+      { title: 'Innovation', description: 'Exploring emerging technologies and creative approaches to deliver digital products.' },
+      { title: 'Quality', description: 'Vetting every product in the store for quality and usefulness.' },
+      { title: 'Community', description: 'Bringing digital creators together to share, learn and grow.' },
+    ],
     url: 'https://nexustech.pk/',
     logo: { src: '/images/nexus-tech-pk-logo.png', width: 756, height: 766 },
     socialProfiles: [
