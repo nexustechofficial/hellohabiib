@@ -13,7 +13,7 @@
 
 ## Validation
 - See QA_REPORT.md for actual commands, pass counts, measurements and limits.
-- Frozen install, lint, typecheck and production build passed; 15 unit tests and 7 browser tests passed. Automated Axe scans passed on all seven informational pages.
+- Frozen install, lint, typecheck and production build passed; 15 unit tests and 8 browser tests passed. Automated Axe scans passed on all seven informational pages.
 - Updated install_script and Next.js start_skill were confirmed saved to the cloud environment draft; publication/restoration are separate and untested.
 
 ## Outstanding owner-controlled content and launch work
@@ -40,5 +40,13 @@
 - Expanded About with the owner's first-person account: WhatsApp community, learning while working, gradual transition into a brand, and personal/client projects.
 - Added an accessible four-chapter journey with numbered stages, not invented dates; linked the homepage teaser to /about#journey.
 - Central biography and profile structured data now consistently include the confirmed community origin.
-- Exact brand spelling, the meaning/currency/period of “six-figure,” and project/client URL/role permissions remain pending. Raw notes are isolated in src/content/drafts/owner-notes.json and never imported into public pages.
+- The meaning/currency/period of “six-figure” remains pending. Subsequent owner confirmation resolves the brand name, project URLs, relationships and end-to-end contributions (see below). Raw notes are isolated in src/content/drafts/owner-notes.json and never imported into public pages.
 - Owner requested Roman Urdu for questions and conversation. Website remains English per the design brief.
+
+## Confirmed brand and project links
+- Brand confirmed as Nexus Tech PK; biography and journey now use the name. No financial metric published.
+- Owner confirmed Subecta (https://subecta.com/) as a personal project, Merctra (https://merctra.com/) and Elite Jobs Hub (https://elitejobshub.com/) as client work.
+- Owner confirmed branding and the full website, from idea to deployment, for all three. Cards reflect that contribution without invented tools, dates or results.
+- Project gallery now offers Personal projects / Client work filters and direct website links. Covers are original editorial typography, not fabricated screenshots or claimed official logos.
+- URL verification was attempted twice, including elevated network access; the proxy returned tunnel 403 for all three. Do not assert current live status or scraped site descriptions.
+- Detailed case-study routes remain unpublished until enough specific content/assets are supplied; linked cards are published.

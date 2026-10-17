@@ -30,7 +30,7 @@ The previous Vite site was archived outside the checkout at `/workspace/portfoli
 Home, About, Projects, Services, Journal, Contact, Privacy, custom 404, dynamic project/service/article templates, robots and sitemap are implemented. Templates return 404 for unpublished items. Navigation shows collection pages; empty collections are noindex and excluded from sitemap.
 
 - `src/data/site.ts`: name, approved bio, canonical origin, optional portrait, public contact and verified social URLs.
-- `src/data/content.ts`: typed project, service and article collections. Both `approved` and `published` must be true. Candidate names remain in a non-rendered backlog.
+- `src/data/content.ts`: typed project, service and article collections. Both `approved` and `published` must be true. Owner-confirmed project cards may link directly to their supplied URLs. Set `caseStudyPublished` only when a substantive, approved case study is ready; otherwise its internal route remains 404 and excluded from sitemap. Candidate names remain in a non-rendered backlog.
 - `src/app/globals.css`: centralized color tokens and responsive visual system.
 - `src/components/sculpture.tsx`: original beveled H geometry; desktop-only, lazy-loaded, DPR capped, stops offscreen/in a hidden tab. CSS sculpture fallback on mobile/reduced motion/unavailable WebGL.
 - `src/components/motion.tsx`: optional progressive GSAP effects; no content hidden before JS runs.

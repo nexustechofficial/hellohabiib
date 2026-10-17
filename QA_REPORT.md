@@ -69,3 +69,11 @@ The saved Lighthouse report was refreshed against the portrait-led production bu
 The About page now uses the owner's spoken account for a detailed introduction and four numbered journey chapters, with no invented dates or financial metrics. Homepage and Person biography reflect the community origin. Unclarified brand names, financial claims and project URLs are excluded from rendered content and retained only in draft notes.
 
 Lint, TypeScript, 15 unit tests and the production build passed. About passed overflow checks at 360, 390, 768, 1024 and 1440 pixels; all seven production browser tests passed, including automated accessibility scans. The saved Lighthouse report predates this content-only update and was not rerun for it.
+
+## Confirmed project directory and brand
+
+Owner confirmed the brand as Nexus Tech PK; Subecta is a personal project, while Merctra and Elite Jobs Hub are client work. The owner also confirmed branding and complete websites from idea to deployment for all three. Those statements and the exact supplied links are reflected in cards and the biography. No current live status, technology, business results or project dates were inferred.
+
+The public-site checks returned proxy tunnel 403 for all three URLs, including an elevated retry. No scraped descriptions or external screenshots are used. Editorial typography is used as card artwork. Detailed internal case-study pages remain unavailable until there is sufficient substantive content; direct external links and personal/client filters work independently of those pages. Sitemap only includes approved internal case studies.
+
+Lint, typecheck, 15 unit tests and production build passed. All 8 production browser tests passed, including personal/client filters, exact destinations, draft-case-study 404s, brand wording and automated accessibility scans. Project layout checks passed at 360, 390, 768, 1024 and 1440 pixels. Lighthouse was not rerun for this content/directory change.

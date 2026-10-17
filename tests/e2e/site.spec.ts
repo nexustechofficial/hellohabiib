@@ -38,7 +38,7 @@ test('unapproved content is absent and draft detail URLs really return 404',asyn
  for(const path of ['/projects/nexus-tech-pk','/services/website-development','/journal/first-post','/not-a-real-page']){
   const response=await page.goto(path);expect(response?.status()).toBe(404);await expect(page.locator('h1')).toContainText('shape');
  }
- await page.goto('/');await expect(page.locator('main')).not.toContainText('Subecta');await expect(page.locator('main')).not.toContainText('Elite Jobs Hub');
+ await page.goto('/');await expect(page.locator('main')).toContainText('Subecta');await expect(page.locator('main')).toContainText('Elite Jobs Hub');
  const robots=await request.get('/robots.txt');expect(await robots.text()).toContain('Disallow: /');
  const sitemap=await request.get('/sitemap.xml');expect(await sitemap.text()).not.toContain('<loc>');
  const image=await request.get('/opengraph-image?title=About%20Habibullah');expect(image.status()).toBe(200);expect(image.headers()['content-type']).toContain('image/png');
@@ -84,4 +84,17 @@ test('portrait loads and first-visit intro finishes, replays and skips accessibl
  await page.emulateMedia({reducedMotion:'reduce'});
  await expect(page.getByRole('button',{name:'Replay intro animation'})).toBeHidden();
  await expect(page.locator('.creative-headline')).toBeVisible();
+});
+
+
+test('owner-confirmed project links filter personal and client work without invented case studies',async({page,request})=>{
+ await page.goto('/projects');
+ await expect(page.locator('.project-card')).toHaveCount(3);
+ await expect(page.locator('.project-card[href="https://subecta.com/"]')).toContainText('Personal project');
+ await expect(page.locator('.project-card[href="https://merctra.com/"]')).toContainText('Client work');
+ await expect(page.locator('.project-card[href="https://elitejobshub.com/"]')).toContainText('Client work');
+ await page.getByRole('button',{name:'Personal projects',exact:true}).click();await expect(page.locator('.project-card')).toHaveCount(1);
+ await page.getByRole('button',{name:'Client work',exact:true}).click();await expect(page.locator('.project-card')).toHaveCount(2);
+ expect((await request.get('/projects/subecta')).status()).toBe(404);
+ await page.goto('/about');await expect(page.locator('#journey')).toContainText('Nexus Tech PK');await expect(page.locator('main')).not.toContainText('six-figure');
 });

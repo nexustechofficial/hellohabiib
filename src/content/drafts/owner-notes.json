@@ -1,18 +1,30 @@
 {
-  "source": "Owner's spoken account in this conversation",
   "published": false,
-  "pendingBrand": {
-    "spokenName": "sixtech BG",
-    "previousBriefName": "Nexus Tech PK",
-    "question": "Confirm exact spelling and whether these are the same venture."
-  },
+  "confirmedBrand": "Nexus Tech PK",
   "pendingFinancialClaim": {
     "spokenClaim": "six-figure brand",
     "question": "Clarify currency, revenue/profit/valuation, period, and approval of exact public wording."
   },
-  "pendingProjects": [
-    { "spokenDomain": "sabecta.com", "relationship": "Owner says it is his own project", "missing": ["Exact URL and spelling", "Description", "Status", "Role", "Assets", "Technology and outcomes if shared"] },
-    { "spokenDomain": "Marketetra.com", "relationship": "Owner says it is client work", "missing": ["Exact URL and spelling", "Actual contribution", "Permission to show client work", "Assets", "Status"] }
+  "confirmedProjectLinks": [
+    {
+      "url": "https://subecta.com/",
+      "relationship": "Personal project"
+    },
+    {
+      "url": "https://merctra.com/",
+      "relationship": "Client work"
+    },
+    {
+      "url": "https://elitejobshub.com/",
+      "relationship": "Client work"
+    }
   ],
-  "policy": "Do not render this draft file, guess URLs, or infer case-study facts. Owner said exact links will follow."
+  "pendingDetails": [
+    "Project-specific description and current status",
+    "Dates, technology, images and outcomes if shared",
+    "Nexus Tech PK URL"
+  ],
+  "networkObservation": "All three URL checks returned proxy tunnel 403 in the cloud. No site content or live status verified.",
+  "policy": "Names and link-card relationships are owner confirmed. Do not invent detailed case studies or publish financial claims.",
+  "confirmedContribution": "All three projects: complete website and branding, from idea to deployment, per owner."
 }
