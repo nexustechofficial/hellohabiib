@@ -15,7 +15,9 @@ describe('identity and publishing safety', () => {
     const candidate = projects[0];
     expect(publishedItems([{ ...candidate, approved: false }, { ...candidate, published: false }])).toEqual([]);
     expect(projects).toHaveLength(3);
-    expect([...services, ...articles]).toEqual([]);
+    expect(services.map(item => item.slug)).toEqual(['brand-startup-launch']);
+    expect(publishedItems(services.map(item => ({ ...item, approved: false })))).toEqual([]);
+    expect(articles).toEqual([]);
   });
   it('prevents script breakout in structured data', () => {
     expect(JsonLd({ data: { name: '</script><script>alert(1)</script>' } })).not.toContain('<');

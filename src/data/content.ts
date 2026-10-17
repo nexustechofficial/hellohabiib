@@ -1,3 +1,5 @@
+import { startupDeliverables, startupProcess, startupFaq } from './startup';
+
 export type Section = { heading: string; body: string };
 export type Project = {
   slug: string; title: string; published: boolean; approved: boolean;
@@ -66,12 +68,17 @@ export const projectContent: Project[] = [
     ],
   },
 ];
-export const serviceContent: Service[] = [];
+export const serviceContent: Service[] = [{
+  slug: 'brand-startup-launch', title: 'Brand & Startup Launch', published: true, approved: true,
+  summary: 'Turn a business idea into a cohesive brand and digital presence, with branding, a complete website and launch preparation scoped around your needs.',
+  audience: 'Aspiring entrepreneurs and early-stage business owners who need help connecting their idea, identity, website and launch materials. The engagement can also start from an existing brand that needs a clearer digital presence.',
+  deliverables: startupDeliverables.map(item => item.title), process: startupProcess, faq: startupFaq,
+}];
 export const journalContent: Article[] = [];
 export function publishedItems<T extends { published: boolean; approved: boolean }>(items: T[]): T[] { return items.filter(item => item.published && item.approved); }
 export const projects = publishedItems(projectContent);
 export const caseStudies = projects.filter(item => item.caseStudyPublished);
-export const services = serviceContent.filter(item => item.published && item.approved);
+export const services = publishedItems(serviceContent);
 export const articles = journalContent.filter(item => item.published && item.approved);
 
 // Candidate names only. These are not imported by any public page or schema.

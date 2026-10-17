@@ -13,7 +13,7 @@
 
 ## Validation
 - See QA_REPORT.md for actual commands, pass counts, measurements and limits.
-- Frozen install, lint, typecheck and production build passed; 15 unit tests and 8 browser tests passed. Automated Axe scans passed on all seven informational pages.
+- Frozen install, lint, typecheck and production build passed; 15 unit tests and 9 browser tests passed. Automated Axe scans passed on all seven informational pages.
 - Updated install_script and Next.js start_skill were confirmed saved to the cloud environment draft; publication/restoration are separate and untested.
 
 ## Outstanding owner-controlled content and launch work
@@ -78,3 +78,9 @@
 - Shared 16:9 screenshot frames replace fixed heights and large letterboxing; original image proportions remain contained.
 - Removed role and stack rows from cards; kept description and Explore case study. Detailed role/stack remain on project pages.
 - Added restrained image hover/focus zoom with reduced-motion support.
+
+## Brand and startup services
+- Owner approved brand/startup launch service direction with an entrepreneur-led hero, then a personal About section.
+- Services page now features the approved portrait and community-to-Nexus Tech PK story, nine scoped deliverables, four-step process, genuine projects, native FAQs and inquiry CTAs.
+- Published Brand & Startup Launch service detail route and wired contact service preselection. Other unapproved service categories remain unpublished.
+- No reference-image age, client totals, years, testimonials, price packages or guessed WhatsApp details copied. Pricing is discussed per scope; existing mail delivery configuration remains unchanged.

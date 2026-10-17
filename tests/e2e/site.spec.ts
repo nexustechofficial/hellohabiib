@@ -4,7 +4,7 @@ const valid={name:'Test Person',email:'test@example.com',company:'',projectType:
 
 test('identity, styling, schema and all informational routes render',async({page})=>{
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
- for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub']){
+ for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub','/services/brand-startup-launch']){
   const response=await page.goto(path);expect(response?.status()).toBe(200);
   await expect(page.locator('main h1')).toHaveCount(1);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content',/noindex/);
@@ -61,7 +61,7 @@ test('core identity, navigation and static H survive without JavaScript',async({
 
 test('informational routes have no automated WCAG A/AA violations',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
- for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub']){
+ for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub','/services/brand-startup-launch']){
   await page.goto(path);
   const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
   expect(audit.violations,`Accessibility violations on ${path}`).toEqual([]);
@@ -106,4 +106,16 @@ test('owner-confirmed projects filter personal and client work and open detailed
   await expect(page.locator('.reading .text-link').first()).toHaveAttribute('href',slug==='elite-jobs-hub'?'https://elitejobshub.com/':`https://${slug}.com/`);
  }
  await page.goto('/about');await expect(page.locator('#journey')).toContainText('Nexus Tech PK');await expect(page.locator('main')).not.toContainText('six-figure');
+});
+
+
+test('startup service leads from founder story to scoped inquiry',async({page})=>{
+ await page.goto('/services');await expect(page.locator('h1')).toContainText('Entrepreneur?');
+ await expect(page.locator('.startup-founder-copy')).toContainText('Nexus Tech PK');
+ await expect(page.locator('.startup-service-card')).toHaveCount(9);
+ await page.getByRole('link',{name:'Explore Services',exact:true}).click();await expect(page).toHaveURL(/#startup-services$/);
+ await page.locator('.startup-faq summary').first().click();await expect(page.locator('.startup-faq details').first()).toHaveAttribute('open','');
+ await page.getByRole('link',{name:'See the service scope'}).click();await expect(page).toHaveURL(/\/services\/brand-startup-launch$/);
+ await expect(page.locator('h1')).toHaveText('Brand & Startup Launch');
+ await page.getByRole('link',{name:'Discuss this project'}).click();await expect(page.locator('#projectType')).toHaveValue('brand-startup-launch');
 });

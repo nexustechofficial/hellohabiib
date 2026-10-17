@@ -35,7 +35,7 @@ Home, About, Projects, Services, Journal, Contact, Privacy, custom 404, dynamic 
 - `src/components/sculpture.tsx`: original beveled H geometry; desktop-only, lazy-loaded, DPR capped, stops offscreen/in a hidden tab. CSS sculpture fallback on mobile/reduced motion/unavailable WebGL.
 - `src/components/motion.tsx`: optional progressive GSAP effects; no content hidden before JS runs.
 
-The owner-supplied portrait is used with an AI-assisted charcoal background and warm lighting edit. No social links, timeline dates, testimonials, pricing or project outcomes have been invented. The brief's editorial positioning is used, but the requested five services remain unpublished. Replace/expand the biography only with approved facts.
+The owner-supplied portrait is used with an AI-assisted charcoal background and warm lighting edit. No social links, timeline dates, testimonials, pricing or project outcomes have been invented. Brand & Startup Launch is owner-approved and published; other proposed service categories remain unpublished. Replace/expand the biography only with approved facts.
 
 ## Inquiry delivery
 
@@ -78,3 +78,7 @@ Subecta, Merctra and Elite Jobs Hub now have published internal project descript
 ## Original project screenshots
 
 Owner-uploaded PNG screenshots are stored unchanged in `public/images/projects/` and referenced by project data. Gallery previews use contained images within compact covers. Detail pages use the original aspect ratio and link to the full-size PNG. Screenshot colors belong to the client/product design; portfolio controls and typography retain their own style. Do not replace authentic screenshots with generated recreations.
+
+## Brand and startup services
+
+`src/data/startup.ts` stores nine scoped deliverables, a four-step process and FAQ content shared by the Services landing page and `/services/brand-startup-launch`. The landing page starts with the entrepreneur hero followed by the owner’s portrait and confirmed community-to-brand story. Inquiry links preselect the service in the contact form. No unconfirmed reference prices, age, client counters, reviews or WhatsApp number are published. Delivery still requires the existing contact-provider configuration.
