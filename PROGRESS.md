@@ -114,3 +114,6 @@
 - Lint, all 15 unit tests, production build and all 9 browser tests passed. Additional browser checks verified both brand logos decode, three value cards and founding detail appear, and Home/About fit 320–1440px. Visually reviewed the completed section.
 
 - Shortened the shared Nexus section to two concise paragraphs, removed the “also known as Habib Ullah” phrase from this section and removed the mission quote plus its unused data field. Lint and production build passed. Browser checks on Home/About verified both removals, two paragraphs, no horizontal overflow at 320–1440px and desktop copy height below the logo-panel height (550px versus 654px at 1440px).
+
+- Temporarily removed Journal listing/article routes, all shared navigation links (desktop/mobile/no-JS) and sitemap entries at owner request. Article data/types remain for future restoration; route implementations are recoverable in Git history. Updated README and existing browser expectations to assert Journal is absent and /journal returns 404.
+- Validation: lint and 15 unit tests passed. Initial production build found stale generated dev route types referencing deleted files; moved only the generated .next/dev cache to /tmp and rebuilt successfully. All 9 browser tests passed, including Journal 404, navigation absence and accessibility checks.

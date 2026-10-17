@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { Arrow, Mark } from './icons';
 import { NavigationLoading } from './navigation-loading';
-const links = [['/', 'Home'], ['/about', 'About'], ['/projects', 'Projects'], ['/services', 'Services'], ['/journal', 'Journal'], ['/contact', 'Contact']];
+const links = [['/', 'Home'], ['/about', 'About'], ['/projects', 'Projects'], ['/services', 'Services'], ['/contact', 'Contact']];
 export function Header() {
   const path = usePathname();
   const [open, setOpen] = useState(false);

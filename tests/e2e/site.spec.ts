@@ -4,7 +4,7 @@ const valid={name:'Test Person',email:'test@example.com',company:'',projectType:
 
 test('identity, styling, schema and all informational routes render',async({page})=>{
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
- for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub','/services/brand-startup-launch']){
+ for(const path of ['/','/about','/projects','/services','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub','/services/brand-startup-launch']){
   const response=await page.goto(path);expect(response?.status()).toBe(200);
   await expect(page.locator('main h1')).toHaveCount(1);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content',/noindex/);
@@ -12,6 +12,7 @@ test('identity, styling, schema and all informational routes render',async({page
  }
  await page.goto('/');
  await expect(page.locator('h1')).toContainText('Habibullah');
+ await expect(page.locator('a[href^="/journal"]')).toHaveCount(0);
  expect(await page.locator('body').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(8, 8, 8)');
  const schema=JSON.parse(await page.locator('script[type="application/ld+json"]').innerText());
  expect(schema['@graph'][0].name).toBe('Habibullah');
@@ -39,7 +40,7 @@ test('responsive layout, reduced motion and mobile keyboard menu',async({page})=
 });
 
 test('unapproved content is absent and draft detail URLs really return 404',async({page,request})=>{
- for(const path of ['/projects/nexus-tech-pk','/services/website-development','/journal/first-post','/not-a-real-page']){
+ for(const path of ['/projects/nexus-tech-pk','/services/website-development','/journal','/journal/first-post','/not-a-real-page']){
   const response=await page.goto(path);expect(response?.status()).toBe(404);await expect(page.locator('h1')).toContainText('shape');
  }
  await page.goto('/');await expect(page.locator('main')).toContainText('Subecta');await expect(page.locator('main')).toContainText('Elite Jobs Hub');
@@ -65,7 +66,7 @@ test('core identity and navigation survive without JavaScript',async({browser})=
 
 test('informational routes have no automated WCAG A/AA violations',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
- for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub','/services/brand-startup-launch']){
+ for(const path of ['/','/about','/projects','/services','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub','/services/brand-startup-launch']){
   await page.goto(path);
   const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
   expect(audit.violations,`Accessibility violations on ${path}`).toEqual([]);

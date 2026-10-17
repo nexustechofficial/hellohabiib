@@ -27,7 +27,7 @@ The previous Vite site was archived outside the checkout at `/workspace/portfoli
 
 ## Routes and content
 
-Home, About, Projects, Services, Journal, Contact, Privacy, custom 404, dynamic project/service/article templates, robots and sitemap are implemented. Templates return 404 for unpublished items. Navigation shows collection pages; empty collections are noindex and excluded from sitemap.
+Home, About, Projects, Services, Contact, Privacy, custom 404, dynamic project/service templates, robots and sitemap are implemented. Templates return 404 for unpublished items. Navigation shows collection pages; empty collections are noindex and excluded from sitemap.
 
 - `src/data/site.ts`: name, approved bio, canonical origin, optional portrait, public contact and verified social URLs.
 - `src/data/content.ts`: typed project, service and article collections. Both `approved` and `published` must be true. Owner-confirmed project cards may link directly to their supplied URLs. Set `caseStudyPublished` only when a substantive, approved case study is ready; otherwise its internal route remains 404 and excluded from sitemap. Candidate names remain in a non-rendered backlog.
@@ -95,3 +95,5 @@ For the live canonical site at `https://hellohabiib.com`:
 4. Link to this portfolio from your genuine Nexus Tech PK website and verified public profiles, using your real name and role. Supply exact official URLs before adding them to this site’s structured data.
 
 These changes help search engines understand the person and brand; crawling, indexing, ranking and timing remain Google’s decisions. Search Console/DNS configuration is not performed by a code push.
+
+Journal is temporarily removed: its listing and article routes return 404, navigation omits it, and it is excluded from the sitemap. Article data types remain available for future work.
