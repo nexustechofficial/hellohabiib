@@ -6,7 +6,7 @@ export type Project = {
   relationship?: 'Personal project' | 'Client work'; caseStudyPublished?: boolean;
   role?: string; year?: string; stack: string[]; sections: Section[];
   features?: string[];
-  cover?: string; liveUrl?: string; repositoryUrl?: string;
+  cover?: string; coverAlt?: string; coverDimensions?: { width: number; height: number }; liveUrl?: string; repositoryUrl?: string;
 };
 export type Service = {
   slug: string; title: string; published: boolean; approved: boolean;
@@ -28,7 +28,7 @@ export const projectContent: Project[] = [
     category: 'Products', relationship: 'Personal project',
     summary: 'A MERN-based subscription management platform for digital subscription sellers, bringing customers, recurring revenue and renewals into one workspace.',
     role: 'Branding · Full-stack development · Deployment',
-    liveUrl: 'https://subecta.com/', stack: [...mernStack], caseStudyPublished: true,
+    liveUrl: 'https://subecta.com/', cover: '/images/projects/subecta-homepage.png', coverAlt: 'Subecta homepage with a subscription dashboard and renewal reminders', coverDimensions: { width: 1656, height: 942 }, stack: [...mernStack], caseStudyPublished: true,
     features: ['Customer and subscription tracking', 'Renewal dates and upcoming-expiry visibility', 'Recurring-revenue dashboard and analytics', 'Automated WhatsApp renewal reminders'],
     sections: [
       { heading: 'Built for recurring-revenue businesses', body: 'Subecta is my own product, designed for businesses that sell digital subscriptions and need a clear view of their recurring operations. Its purpose is to bring customer records, subscriptions and renewal activity together, so a seller can understand what needs attention without piecing the picture together manually.' },
@@ -42,7 +42,7 @@ export const projectContent: Project[] = [
     category: 'Websites', relationship: 'Client work',
     summary: 'A MERN-based global trade and sourcing website connecting Canadian specialty-food producers, international suppliers and prospective buyers.',
     role: 'Branding · Full-stack development · Deployment',
-    liveUrl: 'https://merctra.com/', stack: [...mernStack], caseStudyPublished: true,
+    liveUrl: 'https://merctra.com/', cover: '/images/projects/merctra-homepage.png', coverAlt: 'Merctra homepage presenting Canadian specialty-food sourcing and global trade', coverDimensions: { width: 1507, height: 868 }, stack: [...mernStack], caseStudyPublished: true,
     features: ['Product and sourcing information', 'Dedicated buyer and supplier pathways', 'Market coverage and process explanations', 'Quote-request and contact entry points'],
     sections: [
       { heading: 'A digital presence for global sourcing', body: 'Merctra is a client project for a global trade and sourcing business. The website presents a connection between Canadian specialty-food producers and buyers in international markets, alongside products from international suppliers. Its homepage highlights Canadian sourcing and products such as Ontario maple syrup, giving visitors an immediate sense of the business and its offering.' },
@@ -56,7 +56,7 @@ export const projectContent: Project[] = [
     category: 'Products', relationship: 'Client work',
     summary: 'A MERN-based job discovery platform designed to help people search opportunities by role and location, refine their preferences and keep track of applications.',
     role: 'Branding · Full-stack development · Deployment',
-    liveUrl: 'https://elitejobshub.com/', stack: [...mernStack], caseStudyPublished: true,
+    liveUrl: 'https://elitejobshub.com/', cover: '/images/projects/elite-jobs-hub-homepage.png', coverAlt: 'Elite Jobs Hub homepage with job-title and location search', coverDimensions: { width: 1785, height: 971 }, stack: [...mernStack], caseStudyPublished: true,
     features: ['Job-title, keyword and location search', 'Salary and work-arrangement filtering', 'Remote, category and location discovery', 'CV upload and application-dashboard pathways'],
     sections: [
       { heading: 'Making job discovery easier to navigate', body: 'Elite Jobs Hub is a client project focused on helping job seekers find opportunities that fit their preferences. Its public-facing experience presents US job discovery through a clear search-first layout, bringing role, location and work-arrangement choices into the start of the journey.' },

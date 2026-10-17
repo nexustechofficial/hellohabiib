@@ -89,3 +89,9 @@ Lint, typecheck, 15 unit tests and the production build passed. Browser coverage
 Reduced project cover height to 220px desktop / 195px tablet / 185px mobile. Increased summaries to 16px, project role/stack text to 12–13px and destination links to 14px. Removed monospace UI font declarations in favor of locally hosted Poppins throughout labels, captions and metadata. Detail-page reading copy was also enlarged.
 
 Lint, typecheck, production build, 15 unit tests and all 8 production browser tests passed. Runtime checks on Home, About, Projects and Subecta confirmed Poppins and no horizontal overflow at widths 360, 390, 768, 1024, 1440 and 1920. Desktop measured cover height 220px, summary 16px and role 13px. Automated accessibility scans passed across all 10 informational/detail routes. Lighthouse was not rerun for this typography/layout change.
+
+## Original screenshot files
+
+Safely extracted only PNG entries from the owner-uploaded RAR. Visually matched Subecta (1656×942), Elite Jobs Hub (1785×971), and Merctra (1507×868). Copied original PNG bytes into `public/images/projects/`; SHA-256 comparisons with extracted sources matched for all three. No image generation, recoloring, crop or reconstruction was used.
+
+Cards use contained image previews at the existing compact heights. Detail figures preserve each source aspect ratio and link to full-size PNGs. Browser tests now wait for actual card/detail image decoding and verify the detail containment mode. Lint, typecheck, 15 unit tests and production build passed. All 8 production browser tests passed, including actual screenshot loading in cards and detail pages, containment, and accessibility scans. Gallery and all three detail pages passed overflow checks at 360, 390, 768, 1024 and 1440 pixels.

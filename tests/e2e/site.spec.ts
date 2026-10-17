@@ -90,6 +90,7 @@ test('portrait loads and first-visit intro finishes, replays and skips accessibl
 test('owner-confirmed projects filter personal and client work and open detailed project pages',async({page})=>{
  await page.goto('/projects');
  await expect(page.locator('.project-card')).toHaveCount(3);
+ for(const image of await page.locator('.project-cover img').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);}
  await expect(page.locator('.project-card[href="/projects/subecta"]')).toContainText('Personal project');
  await expect(page.locator('.project-card[href="/projects/merctra"]')).toContainText('Client work');
  await expect(page.locator('.project-card[href="/projects/elite-jobs-hub"]')).toContainText('Client work');
@@ -99,6 +100,9 @@ test('owner-confirmed projects filter personal and client work and open detailed
   const response=await page.goto(`/projects/${slug}`);expect(response?.status()).toBe(200);
   await expect(page.locator('.case-meta')).toContainText('MongoDB');
   await expect(page.locator('.project-features li')).toHaveCount(4);
+  const screenshot=page.locator('.case-cover img');await screenshot.scrollIntoViewIfNeeded();
+  await expect.poll(()=>screenshot.evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);
+  expect(await screenshot.evaluate(img=>getComputedStyle(img).objectFit)).toBe('contain');
   await expect(page.locator('.reading .text-link').first()).toHaveAttribute('href',slug==='elite-jobs-hub'?'https://elitejobshub.com/':`https://${slug}.com/`);
  }
  await page.goto('/about');await expect(page.locator('#journey')).toContainText('Nexus Tech PK');await expect(page.locator('main')).not.toContainText('six-figure');

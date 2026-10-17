@@ -74,3 +74,7 @@ Poppins headings use bold/extra-bold weights. `Intro` plays a brief, nonblocking
 ## Project descriptions
 
 Subecta, Merctra and Elite Jobs Hub now have published internal project descriptions. Purpose and feature summaries come from owner-supplied screenshots; MERN and full branding/website/deployment scope come from owner confirmation. Do not turn screenshot demo counters into revenue, usage or placement outcomes. Keep implementation-specific claims, dates and metrics out until confirmed.
+
+## Original project screenshots
+
+Owner-uploaded PNG screenshots are stored unchanged in `public/images/projects/` and referenced by project data. Gallery previews use contained images within compact covers. Detail pages use the original aspect ratio and link to the full-size PNG. Screenshot colors belong to the client/product design; portfolio controls and typography retain their own style. Do not replace authentic screenshots with generated recreations.

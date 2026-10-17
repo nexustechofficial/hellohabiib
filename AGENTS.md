@@ -6,7 +6,7 @@
 - `src/data/site.ts` holds identity. Never guess profile URLs, contact details, biography, dates, achievements or project results.
 - `src/data/content.ts` holds typed collections. Both `approved` and `published` must be true. Unapproved candidate names stay in the editorial backlog, not rendered pages or schemas.
 - Empty collection routes are noindex. Draft detail URLs return 404. `SITE_INDEXABLE` must be explicitly enabled only on the approved canonical production deployment.
-- Visual tokens: obsidian, white/gray, Nexus orange. No blue, cyan, purple, or invented real-person portraits.
+- Portfolio UI tokens: obsidian, white/gray, Nexus orange; use Poppins throughout. Owner-supplied project screenshots retain their authentic colors. Do not recolor or reconstruct them to fit the portfolio palette. Never invent a real-person portrait.
 
 ## Commands and quality gates
 - Node >=22.12. `npm ci --cache /workspace/.npm-cache --no-audit --no-fund` in this cloud workspace.

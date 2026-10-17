@@ -66,3 +66,9 @@
 - Reduced oversized project covers to 220px desktop, 195px tablet and 185px mobile.
 - Increased project summaries to 16px, role/stack details to 12–13px, and case-study links to 14px; detail-page copy is larger too.
 - Replaced all monospace UI font declarations with the locally hosted Poppins family, including labels, timelines, captions and project metadata.
+
+## Original project screenshots integrated
+- Extracted the three original PNGs from the owner-uploaded RAR and matched Subecta, Merctra and Elite Jobs Hub visually.
+- Original PNG bytes retained in public/images/projects and referenced by project data. No recreations, recoloring or crops.
+- Home/project cards show compact, contained screenshots; project detail pages preserve source aspect ratio and offer full-size viewing. Portfolio UI stays Poppins/obsidian/orange; authentic project screenshot colors remain unchanged.
+- Browser coverage now verifies actual card/detail image loading to prevent missing-image regressions.
