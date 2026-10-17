@@ -91,3 +91,5 @@
 - Shared brand mark now uses the portrait avatar in header, footer and intro. Added PNG/ICO favicons and Apple touch icon; removed the old H SVG icon.
 
 - Updated homepage tagline and default social preview to “I build what you can imagine”; retained three-line animation and adjusted the longer line for small screens.
+
+- Owner revised tagline to “I build what you imagine.” Removed CAN and the smaller last-line font override; all three headline lines now inherit one size.
