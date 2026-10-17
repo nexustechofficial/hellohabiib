@@ -146,3 +146,5 @@
 - Temporarily removed the “Who am I?” milestone section from homepage rendering without deleting either component, its milestone content, CSS or images. Restored the hero scroll link to the existing manifesto section. README records restoration instructions. Lint/build passed; inspected built homepage to confirm no milestone section or stale anchor while saved components remain on disk.
 
 - Restored owner-preferred homepage browser title: “Habib Ullah | Entrepreneur, Developer & Digital Builder”. Updated the existing browser title assertion. Production build passed and generated homepage title was verified exactly; founder/brand content and structured data remain in place.
+
+- Removed the once-per-tab sessionStorage gate from the homepage intro. It now autoplays on homepage mount, refresh and return visits, preserving Escape/Tab skipping and reduced-motion preference handling. Lint/build passed; updated browser test verified initial autoplay, completion, autoplay after reload, manual replay, keyboard skipping and reduced-motion behavior.

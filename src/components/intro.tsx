@@ -45,10 +45,8 @@ export function Intro() {
     button.addEventListener('click', play);
     document.addEventListener('keydown', skip);
     preference.addEventListener('change', cancelForPreference);
-    // Run once per tab. Refreshing or returning to Home never forces a long intro.
-    let seen = false;
-    try { seen = sessionStorage.getItem('habibullah-intro') === 'seen'; sessionStorage.setItem('habibullah-intro', 'seen'); } catch { /* Private browsing still works. */ }
-    if (!seen && !preference.matches) {
+    // Autoplay on each homepage load, including refreshes and return visits.
+    if (!preference.matches) {
       play();
       // Absolute failsafe if a tab sleeps while the effect is mounted.
       fallbackTimer = setTimeout(() => { element.hidden = true; }, 3000);

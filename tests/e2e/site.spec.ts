@@ -74,14 +74,18 @@ test('informational routes have no automated WCAG A/AA violations',async({page})
 });
 
 
-test('portrait loads and first-visit intro finishes, replays and skips accessibly',async({page})=>{
+test('intro autoplays on first load and refresh, finishes and skips accessibly',async({page})=>{
  await page.goto('/');
- await page.waitForFunction(()=>sessionStorage.getItem('habibullah-intro')==='seen');
+ await expect(page.locator('.intro-overlay')).toBeVisible();
  const portrait=page.locator('.hero-portrait img');
  await expect(portrait).toHaveAttribute('alt','Portrait of Habibullah');
  await expect(portrait).toHaveJSProperty('complete',true);
  expect(await portrait.evaluate((image:HTMLImageElement)=>image.naturalWidth)).toBeGreaterThan(0);
  await expect(page.locator('.intro-overlay')).toBeHidden({timeout:5000});
+ await page.reload();
+ await expect(page.locator('.intro-overlay')).toBeVisible();
+ await page.keyboard.press('Escape');
+ await expect(page.locator('.intro-overlay')).toBeHidden();
  await page.getByRole('button',{name:'Replay intro animation'}).click();
  await expect(page.locator('.intro-overlay')).toBeVisible();
  await page.keyboard.press('Escape');
