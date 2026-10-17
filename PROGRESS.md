@@ -139,3 +139,6 @@
 
 - Tightened milestone rows to a fixed 44px logo column (40px mobile), consistent text alignment and smaller row padding/gaps. Split the combined client row into separate Merctra and Elite Jobs Hub entries so each brand has one logo and a direct case-study link. Lint and production build passed; browser checks confirmed four aligned rows, equal logo sizes and no overflow at 320, 390, 768 and 1440px. Visually reviewed desktop result.
 - Requested the newly shown flat Nexus mark as a downloadable file/archive: inline image has no workspace path. Replacement remains pending; existing uploaded Nexus logo is retained until the original file arrives.
+
+- Made milestone logo frames circular and combined the two client logos in one row with exact half-diameter overlap (22px of 44px on desktop, 20px of 40px on mobile). Shared logo column keeps text aligned. Lint and production build passed; browser geometry checks verified circles, 50% overlap and no horizontal overflow at 320, 390, 768 and 1440px.
+- The newly requested flat Nexus image remains inline-only without a downloadable attachment; original uploaded Nexus logo is retained pending its file.
