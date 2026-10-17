@@ -142,3 +142,5 @@
 
 - Made milestone logo frames circular and combined the two client logos in one row with exact half-diameter overlap (22px of 44px on desktop, 20px of 40px on mobile). Shared logo column keeps text aligned. Lint and production build passed; browser geometry checks verified circles, 50% overlap and no horizontal overflow at 320, 390, 768 and 1440px.
 - The newly requested flat Nexus image remains inline-only without a downloadable attachment; original uploaded Nexus logo is retained pending its file.
+
+- Temporarily removed the “Who am I?” milestone section from homepage rendering without deleting either component, its milestone content, CSS or images. Restored the hero scroll link to the existing manifesto section. README records restoration instructions. Lint/build passed; inspected built homepage to confirm no milestone section or stale anchor while saved components remain on disk.

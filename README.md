@@ -97,3 +97,5 @@ For the live canonical site at `https://hellohabiib.com`:
 These changes help search engines understand the person and brand; crawling, indexing, ranking and timing remain Google’s decisions. Search Console/DNS configuration is not performed by a code push.
 
 Journal is temporarily removed: its listing and article routes return 404, navigation omits it, and it is excluded from the sitemap. Article data types remain available for future work.
+
+The “Who am I?” milestone section is saved but not rendered on the homepage. To restore it, import `MilestonesSection` from `@/components/milestones-section` in `src/app/page.tsx` and render `<MilestonesSection/>` after the hero. Its logo component, original assets and CSS remain in place. Optionally change the hero scroll cue back to `#milestones`.
