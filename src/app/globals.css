@@ -82,3 +82,5 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 .nexus-section .eyebrow{font-size:11px;letter-spacing:1.3px}
 @media(max-width:960px){.nexus-grid{gap:35px;grid-template-columns:1fr 1.2fr}.nexus-brand{padding:30px 24px}.nexus-role{font-size:10px}}
 @media(max-width:700px){.nexus-grid{grid-template-columns:1fr;gap:35px}.nexus-brand>p{font-size:60px;margin:25px 0}.nexus-copy>p{font-size:15px}.nexus-section .eyebrow{font-size:10px}.nexus-role{font-size:11px}.nexus-links{flex-direction:column;align-items:flex-start}}
+
+.nexus-public-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:22px}.nexus-public-links .text-link{font-size:14px}.nexus-public-links+.nexus-links{margin-top:12px}

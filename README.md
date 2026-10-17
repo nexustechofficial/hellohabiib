@@ -85,7 +85,7 @@ Owner-uploaded PNG screenshots are stored unchanged in `public/images/projects/`
 
 ### Name searches and Nexus Tech PK
 
-The owner-confirmed identity is Habibullah (also known as Habib Ullah), Founder & CEO of Nexus Tech PK. Home and About explain the brand relationship visibly; Person and Organization structured data link the founder and brand. No brand domain or social profiles are assumed.
+The owner-confirmed identity is Habibullah (also known as Habib Ullah), Founder & CEO of Nexus Tech PK. Home and About explain the brand relationship visibly; Person and Organization structured data link the founder and brand. The owner supplied the official brand website (https://nexustech.pk/) and Nexus Tech PK Facebook/Instagram profiles. They are linked visibly and in Organization schema; they are not treated as personal profiles.
 
 For the live canonical site at `https://hellohabiib.com`:
 

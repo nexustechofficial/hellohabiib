@@ -6,7 +6,14 @@ export const siteIdentity = {
   publicAliases: ['Habib Ullah'] as string[],
   verifiedSocialProfiles: [] as { platform: string; url: string }[],
   portrait: { src: '/images/habibullah-portrait.webp', width: 1122, height: 1402 } as null | { src: string; width: number; height: number },
-  featuredVenture: { name: 'Nexus Tech PK' } as null | { name: string; url?: string },
+  featuredVenture: {
+    name: 'Nexus Tech PK',
+    url: 'https://nexustech.pk/',
+    socialProfiles: [
+      { platform: 'Facebook', url: 'https://web.facebook.com/nexustechdotpk/' },
+      { platform: 'Instagram', url: 'https://www.instagram.com/nexustechdotpk/' },
+    ],
+  },
   contact: null as null | { email: string; whatsapp?: string },
 };
 
