@@ -107,3 +107,9 @@ Added 3.5% screenshot hover/focus zoom, disabled for reduced motion. Lint, typec
 Owner approved a brand/startup launch service page beginning with an entrepreneur headline followed by a personal About section. Implemented nine scoped service deliverables, four-stage process, existing genuine project cards, native FAQs, a launch CTA and a published detail route. Inquiry links preselect Brand & Startup Launch. Other unapproved service categories remain unpublished. No reference pricing, age, client statistics, testimonials or guessed WhatsApp links were copied.
 
 Lint, typecheck, 15 unit tests and production build passed. A new browser flow checks hero, nine services, founder story, service-scope navigation, native FAQ and contact preselection. All 9 production browser tests passed. Automated accessibility scans passed across all 11 informational/detail routes. The Services page passed overflow checks at 320, 360, 390, 768, 1024, 1440 and 1920 pixels. No live inquiry delivery or Lighthouse run was performed for this content addition.
+
+## Circular portrait logo and favicon
+
+Owner requested a circular face mark in place of the H logo. Used the image-editing tool to prepare a circular avatar from the supplied portrait, then encoded small PNG/ICO assets for header/footer/intro and browser/Apple icons. The main hero portrait remains unchanged. Removed the old H SVG icon. Logo images are decorative alongside the visible Habibullah name, avoiding duplicate screen-reader labels.
+
+Lint, TypeScript, 15 unit tests and production build passed. All 9 production browser tests passed. Logo image decoding and circular styling passed at 320, 390, 768, 1024 and 1440 pixels with no horizontal overflow. PNG/ICO favicon and Apple icon responses returned 200; transparent favicon corners were verified. No Lighthouse run was added for this asset change.

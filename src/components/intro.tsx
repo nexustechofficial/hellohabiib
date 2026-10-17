@@ -60,5 +60,5 @@ export function Intro() {
       delete document.documentElement.dataset.heroStage;
     };
   }, []);
-  return <><div ref={overlay} className="intro-overlay" hidden aria-hidden="true"><div className="intro-grid"/><span className="intro-corner">H / PERSONAL PORTFOLIO</span><div className="intro-center"><Mark/><span className="intro-name">Habibullah<span>.</span></span><div className="intro-track"><span/></div><span className="intro-caption">IMAGINATION → EXECUTION</span></div><span className="intro-bottom">A NEW PERSPECTIVE IS TAKING SHAPE.</span></div><button ref={replay} className="replay-intro" hidden type="button" aria-label="Replay intro animation"><span aria-hidden="true">↺</span> REPLAY INTRO</button></>;
+  return <><div ref={overlay} className="intro-overlay" hidden aria-hidden="true"><div className="intro-grid"/><span className="intro-corner">HABIBULLAH / PERSONAL PORTFOLIO</span><div className="intro-center"><Mark/><span className="intro-name">Habibullah<span>.</span></span><div className="intro-track"><span/></div><span className="intro-caption">IMAGINATION → EXECUTION</span></div><span className="intro-bottom">A NEW PERSPECTIVE IS TAKING SHAPE.</span></div><button ref={replay} className="replay-intro" hidden type="button" aria-label="Replay intro animation"><span aria-hidden="true">↺</span> REPLAY INTRO</button></>;
 }

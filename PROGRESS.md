@@ -84,3 +84,8 @@
 - Services page now features the approved portrait and community-to-Nexus Tech PK story, nine scoped deliverables, four-step process, genuine projects, native FAQs and inquiry CTAs.
 - Published Brand & Startup Launch service detail route and wired contact service preselection. Other unapproved service categories remain unpublished.
 - No reference-image age, client totals, years, testimonials, price packages or guessed WhatsApp details copied. Pricing is discussed per scope; existing mail delivery configuration remains unchanged.
+
+## Circular face brand mark
+- Owner requested a circular face logo/favicon in place of the H.
+- Created a circular avatar from the supplied portrait using the image editing tool, with transparent outer corners. Original hero portrait remains unchanged.
+- Shared brand mark now uses the portrait avatar in header, footer and intro. Added PNG/ICO favicons and Apple touch icon; removed the old H SVG icon.
