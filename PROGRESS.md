@@ -144,3 +144,5 @@
 - The newly requested flat Nexus image remains inline-only without a downloadable attachment; original uploaded Nexus logo is retained pending its file.
 
 - Temporarily removed the “Who am I?” milestone section from homepage rendering without deleting either component, its milestone content, CSS or images. Restored the hero scroll link to the existing manifesto section. README records restoration instructions. Lint/build passed; inspected built homepage to confirm no milestone section or stale anchor while saved components remain on disk.
+
+- Restored owner-preferred homepage browser title: “Habib Ullah | Entrepreneur, Developer & Digital Builder”. Updated the existing browser title assertion. Production build passed and generated homepage title was verified exactly; founder/brand content and structured data remain in place.
