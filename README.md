@@ -70,3 +70,7 @@ No deployment, purchase, email sending, DNS changes or publication has been perf
 The homepage uses the owner-supplied portrait, relit to match the dark/orange palette, served as a locally optimized WebP. The photo is also used on About and in Person image metadata. `HeroPortrait` adds restrained fine-pointer parallax. The H sculpture is retained lower on the homepage.
 
 Poppins headings use bold/extra-bold weights. `Intro` plays a brief, nonblocking first-visit loading/reveal sequence once per tab; Replay Intro runs it again. Escape or Tab skips immediately. Reduced-motion mode and JavaScript-disabled views omit the intro. `NavigationLoading` provides inline feedback for genuinely pending navigation without hiding server-rendered content. Published detail slugs are statically gated so drafts retain real 404 responses.
+
+## Project descriptions
+
+Subecta, Merctra and Elite Jobs Hub now have published internal project descriptions. Purpose and feature summaries come from owner-supplied screenshots; MERN and full branding/website/deployment scope come from owner confirmation. Do not turn screenshot demo counters into revenue, usage or placement outcomes. Keep implementation-specific claims, dates and metrics out until confirmed.

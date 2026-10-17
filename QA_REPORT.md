@@ -48,7 +48,7 @@ LCP 2.5s; total blocking time 160ms; CLS 0.003. SEO is intentionally limited by 
 
 - No live Resend/Redis credentials are present. Provider connectivity, real inbox receipt, actual Redis persistence and production mail retention are not verified.
 - No second browser engine is installed/tested. No full manual screen-reader audit or real-device battery/thermal test.
-- No approved project content, service scopes, article bodies, dated biography or social profiles were provided. Those remain unpublished; detail templates compile but have no real content to validate.
+- Service scopes, article bodies, dated biography and social profiles remain unapproved/unpublished. Three project descriptions now use owner-supplied screenshots, scope and MERN stack; dates, specific implementation evidence and results are still unspecified.
 - Staging remains noindex with an empty sitemap. Indexable production settings and Search Console/Bing require owner action after deployment.
 - No deploy, DNS change, publication or external messages performed.
 
@@ -77,3 +77,9 @@ Owner confirmed the brand as Nexus Tech PK; Subecta is a personal project, while
 The public-site checks returned proxy tunnel 403 for all three URLs, including an elevated retry. No scraped descriptions or external screenshots are used. Editorial typography is used as card artwork. Detailed internal case-study pages remain unavailable until there is sufficient substantive content; direct external links and personal/client filters work independently of those pages. Sitemap only includes approved internal case studies.
 
 Lint, typecheck, 15 unit tests and production build passed. All 8 production browser tests passed, including personal/client filters, exact destinations, draft-case-study 404s, brand wording and automated accessibility scans. Project layout checks passed at 360, 390, 768, 1024 and 1440 pixels. Lighthouse was not rerun for this content/directory change.
+
+## Owner-supplied screenshots and MERN descriptions
+
+Added three individual project pages from the supplied homepage screenshots and confirmed end-to-end scope. Subecta covers digital subscription seller operations; Merctra covers Canadian specialty-food/global sourcing; Elite Jobs Hub covers job discovery and the applicant journey. Each includes four feature bullets, substantive purpose/experience/contribution/technical sections, and owner-confirmed MongoDB, Express.js, React and Node.js. No screenshot counters are used as real outcomes, and no runtime/implementation audit is claimed.
+
+Lint, typecheck, 15 unit tests and the production build passed. Browser coverage now includes the three published detail routes and their metadata, feature content and website links. All 8 production browser tests passed, including automated accessibility scans across all 10 informational/detail pages. Each of the three project pages passed overflow checks at 360, 390, 768, 1024 and 1440 pixels. Lighthouse was not rerun for this content expansion.

@@ -5,6 +5,7 @@ export type Project = {
   summary: string; status?: 'Live' | 'In development' | 'Concept';
   relationship?: 'Personal project' | 'Client work'; caseStudyPublished?: boolean;
   role?: string; year?: string; stack: string[]; sections: Section[];
+  features?: string[];
   cover?: string; liveUrl?: string; repositoryUrl?: string;
 };
 export type Service = {
@@ -17,12 +18,53 @@ export type Article = {
   approved: boolean; date: string; tags: string[]; sections: Section[];
 };
 
-// Names, URLs and relationships supplied by the owner. End-to-end branding, website development and deployment are owner-confirmed;
-// screenshots, stack and current live status remain unverified; link cards are not case studies.
+// Scope and MERN stack are owner-confirmed. Purpose/features are described from
+// owner-supplied screenshots; screenshot counters are not verified outcomes.
+// No implementation audit, live-status check or performance claim is implied.
+const mernStack = ['MongoDB', 'Express.js', 'React', 'Node.js'];
 export const projectContent: Project[] = [
-  { slug: 'subecta', title: 'Subecta', published: true, approved: true, category: 'Websites', relationship: 'Personal project', summary: 'My own project, taken from idea through branding, complete website development and deployment.', role: 'Branding · Complete website · Deployment', liveUrl: 'https://subecta.com/', stack: [], sections: [], caseStudyPublished: false },
-  { slug: 'merctra', title: 'Merctra', published: true, approved: true, category: 'Websites', relationship: 'Client work', summary: 'End-to-end client work: from the initial idea and branding to the complete website and deployment.', role: 'Branding · Complete website · Deployment', liveUrl: 'https://merctra.com/', stack: [], sections: [], caseStudyPublished: false },
-  { slug: 'elite-jobs-hub', title: 'Elite Jobs Hub', published: true, approved: true, category: 'Websites', relationship: 'Client work', summary: 'Branding, the complete website and deployment for a client — taking the project from idea to launch.', role: 'Branding · Complete website · Deployment', liveUrl: 'https://elitejobshub.com/', stack: [], sections: [], caseStudyPublished: false },
+  {
+    slug: 'subecta', title: 'Subecta', published: true, approved: true,
+    category: 'Products', relationship: 'Personal project',
+    summary: 'A MERN-based subscription management platform for digital subscription sellers, bringing customers, recurring revenue and renewals into one workspace.',
+    role: 'Branding · Full-stack development · Deployment',
+    liveUrl: 'https://subecta.com/', stack: [...mernStack], caseStudyPublished: true,
+    features: ['Customer and subscription tracking', 'Renewal dates and upcoming-expiry visibility', 'Recurring-revenue dashboard and analytics', 'Automated WhatsApp renewal reminders'],
+    sections: [
+      { heading: 'Built for recurring-revenue businesses', body: 'Subecta is my own product, designed for businesses that sell digital subscriptions and need a clear view of their recurring operations. Its purpose is to bring customer records, subscriptions and renewal activity together, so a seller can understand what needs attention without piecing the picture together manually.' },
+      { heading: 'One place to manage the subscription lifecycle', body: 'The product experience centers on a dashboard that presents customers, monthly income and renewals due. Upcoming-expiry notices help surface time-sensitive subscriptions, while WhatsApp reminders are presented as a way to support renewal follow-up. The focus is on helping sellers organize the ongoing customer relationship, rather than treating each sale as an isolated transaction.' },
+      { heading: 'Product identity and experience', body: 'I took Subecta from the initial idea through branding, complete website development and deployment. The visual identity pairs a dark interface with green accents and a dashboard-led product presentation. The website explains the product through feature, analytics and pricing sections, with clear paths to sign in, explore a demo or start using the platform.' },
+      { heading: 'Full-stack MERN foundation', body: 'Subecta is built with MongoDB, Express.js, React and Node.js. This combines a React interface with a JavaScript server-side application layer and MongoDB data persistence. The stack supports the product’s customer, subscription and renewal-management focus within one full-stack application. My contribution covers the full website and brand, from idea to deployment.' },
+    ],
+  },
+  {
+    slug: 'merctra', title: 'Merctra', published: true, approved: true,
+    category: 'Websites', relationship: 'Client work',
+    summary: 'A MERN-based global trade and sourcing website connecting Canadian specialty-food producers, international suppliers and prospective buyers.',
+    role: 'Branding · Full-stack development · Deployment',
+    liveUrl: 'https://merctra.com/', stack: [...mernStack], caseStudyPublished: true,
+    features: ['Product and sourcing information', 'Dedicated buyer and supplier pathways', 'Market coverage and process explanations', 'Quote-request and contact entry points'],
+    sections: [
+      { heading: 'A digital presence for global sourcing', body: 'Merctra is a client project for a global trade and sourcing business. The website presents a connection between Canadian specialty-food producers and buyers in international markets, alongside products from international suppliers. Its homepage highlights Canadian sourcing and products such as Ontario maple syrup, giving visitors an immediate sense of the business and its offering.' },
+      { heading: 'Helping buyers and suppliers find their next step', body: 'The site is organized around the questions a prospective trading partner needs answered: what products are available, which markets the business serves and how the sourcing process works. Dedicated buyer and supplier navigation separates those audiences, while product-exploration, quote-request and contact entry points guide visitors toward a business inquiry.' },
+      { heading: 'Branding through deployment', body: 'My role covered the brand and complete website, from idea to deployment. The supplied design uses a navy-and-gold identity, a clear editorial hierarchy and port imagery to communicate the global-trade context. The aim of the website is to explain the sourcing proposition and give interested businesses a straightforward route to make contact.' },
+      { heading: 'A full-stack JavaScript build', body: 'The website is built on the MERN stack: MongoDB, Express.js, React and Node.js. React provides the presentation layer, with Node.js and Express.js forming the server-side foundation and MongoDB providing the data layer. This full-stack JavaScript foundation supports the business’s digital presence, bringing its sourcing proposition, product information and inquiry pathways into a cohesive website.' },
+    ],
+  },
+  {
+    slug: 'elite-jobs-hub', title: 'Elite Jobs Hub', published: true, approved: true,
+    category: 'Products', relationship: 'Client work',
+    summary: 'A MERN-based job discovery platform designed to help people search opportunities by role and location, refine their preferences and keep track of applications.',
+    role: 'Branding · Full-stack development · Deployment',
+    liveUrl: 'https://elitejobshub.com/', stack: [...mernStack], caseStudyPublished: true,
+    features: ['Job-title, keyword and location search', 'Salary and work-arrangement filtering', 'Remote, category and location discovery', 'CV upload and application-dashboard pathways'],
+    sections: [
+      { heading: 'Making job discovery easier to navigate', body: 'Elite Jobs Hub is a client project focused on helping job seekers find opportunities that fit their preferences. Its public-facing experience presents US job discovery through a clear search-first layout, bringing role, location and work-arrangement choices into the start of the journey.' },
+      { heading: 'From browsing opportunities to tracking applications', body: 'The homepage supports searching by job title, skill or keyword, alongside city, state or ZIP code. Its messaging describes salary and work-arrangement filters and application tracking in a dashboard. Category, location and remote-work navigation give visitors additional ways to explore, while sign-in and CV-upload entry points support the applicant journey.' },
+      { heading: 'An end-to-end client project', body: 'I handled the branding and complete website, taking the project from idea through development and deployment. The design uses a strong typographic hierarchy, a prominent search module and clear category shortcuts to make the first action easy to find. The visual identity belongs to the client project and remains distinct from my personal portfolio.' },
+      { heading: 'Built on MERN', body: 'Elite Jobs Hub uses MongoDB, Express.js, React and Node.js. The stack brings together a React user interface, server-side JavaScript application logic and database persistence for the job-platform experience. The resulting product presentation connects job discovery, account entry points and the application journey within a consistent, search-led experience.' },
+    ],
+  },
 ];
 export const serviceContent: Service[] = [];
 export const journalContent: Article[] = [];

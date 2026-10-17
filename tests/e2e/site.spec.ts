@@ -4,7 +4,7 @@ const valid={name:'Test Person',email:'test@example.com',company:'',projectType:
 
 test('identity, styling, schema and all informational routes render',async({page})=>{
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
- for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy']){
+ for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub']){
   const response=await page.goto(path);expect(response?.status()).toBe(200);
   await expect(page.locator('main h1')).toHaveCount(1);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content',/noindex/);
@@ -61,7 +61,7 @@ test('core identity, navigation and static H survive without JavaScript',async({
 
 test('informational routes have no automated WCAG A/AA violations',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
- for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy']){
+ for(const path of ['/','/about','/projects','/services','/journal','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub']){
   await page.goto(path);
   const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
   expect(audit.violations,`Accessibility violations on ${path}`).toEqual([]);
@@ -87,14 +87,19 @@ test('portrait loads and first-visit intro finishes, replays and skips accessibl
 });
 
 
-test('owner-confirmed project links filter personal and client work without invented case studies',async({page,request})=>{
+test('owner-confirmed projects filter personal and client work and open detailed project pages',async({page})=>{
  await page.goto('/projects');
  await expect(page.locator('.project-card')).toHaveCount(3);
- await expect(page.locator('.project-card[href="https://subecta.com/"]')).toContainText('Personal project');
- await expect(page.locator('.project-card[href="https://merctra.com/"]')).toContainText('Client work');
- await expect(page.locator('.project-card[href="https://elitejobshub.com/"]')).toContainText('Client work');
+ await expect(page.locator('.project-card[href="/projects/subecta"]')).toContainText('Personal project');
+ await expect(page.locator('.project-card[href="/projects/merctra"]')).toContainText('Client work');
+ await expect(page.locator('.project-card[href="/projects/elite-jobs-hub"]')).toContainText('Client work');
  await page.getByRole('button',{name:'Personal projects',exact:true}).click();await expect(page.locator('.project-card')).toHaveCount(1);
  await page.getByRole('button',{name:'Client work',exact:true}).click();await expect(page.locator('.project-card')).toHaveCount(2);
- expect((await request.get('/projects/subecta')).status()).toBe(404);
+ for(const slug of ['subecta','merctra','elite-jobs-hub']){
+  const response=await page.goto(`/projects/${slug}`);expect(response?.status()).toBe(200);
+  await expect(page.locator('.case-meta')).toContainText('MongoDB');
+  await expect(page.locator('.project-features li')).toHaveCount(4);
+  await expect(page.locator('.reading .text-link').first()).toHaveAttribute('href',slug==='elite-jobs-hub'?'https://elitejobshub.com/':`https://${slug}.com/`);
+ }
  await page.goto('/about');await expect(page.locator('#journey')).toContainText('Nexus Tech PK');await expect(page.locator('main')).not.toContainText('six-figure');
 });

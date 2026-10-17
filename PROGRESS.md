@@ -52,3 +52,12 @@
 - Detailed case-study routes remain unpublished until enough specific content/assets are supplied; linked cards are published.
 
 - Added Next.js 16’s documented data-scroll-behavior="smooth" marker so route navigation can override smooth scrolling and avoid the development warning.
+
+## Screenshot-based project descriptions
+- Owner supplied homepage screenshots and confirmed MERN for all three projects.
+- Added individual project pages with substantive purpose, audience, feature overview, owner-confirmed branding/full-stack/deployment role, and MongoDB/Express.js/React/Node.js stack.
+- Subecta: digital subscription seller operations, customer/subscription tracking, renewal visibility and WhatsApp reminders.
+- Merctra: Canadian specialty-food/global sourcing website with buyer/supplier navigation and inquiry paths.
+- Elite Jobs Hub: job discovery by role/location with filtering, CV/account entry points and application-tracking messaging.
+- No screenshot revenue, customer, vacancy or other counters are published as project outcomes. No benchmark, implementation audit or live-status verification claimed.
+- Case-study flags now publish the three approved internal descriptions; gallery cards and generated sitemap use those routes. Source screenshots are visual references, not reconstructed or fabricated screenshots.

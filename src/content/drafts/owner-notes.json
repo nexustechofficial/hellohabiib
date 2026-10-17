@@ -20,11 +20,12 @@
     }
   ],
   "pendingDetails": [
-    "Project-specific description and current status",
-    "Dates, technology, images and outcomes if shared",
+    "Project dates, implementation specifics and substantiated outcomes if shared",
     "Nexus Tech PK URL"
   ],
   "networkObservation": "All three URL checks returned proxy tunnel 403 in the cloud. No site content or live status verified.",
   "policy": "Names and link-card relationships are owner confirmed. Do not invent detailed case studies or publish financial claims.",
-  "confirmedContribution": "All three projects: complete website and branding, from idea to deployment, per owner."
+  "confirmedContribution": "All three projects: complete website and branding, from idea to deployment, per owner.",
+  "confirmedStack": "All three projects use MERN: MongoDB, Express.js, React and Node.js, per owner.",
+  "confirmedEvidence": "Owner supplied homepage screenshots for Subecta, Merctra and Elite Jobs Hub. Descriptions use their visible purpose and interface features; screenshot counters are not outcomes."
 }
