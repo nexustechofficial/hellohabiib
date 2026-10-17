@@ -1,0 +1,18 @@
+{
+  "source": "Owner's spoken account in this conversation",
+  "published": false,
+  "pendingBrand": {
+    "spokenName": "sixtech BG",
+    "previousBriefName": "Nexus Tech PK",
+    "question": "Confirm exact spelling and whether these are the same venture."
+  },
+  "pendingFinancialClaim": {
+    "spokenClaim": "six-figure brand",
+    "question": "Clarify currency, revenue/profit/valuation, period, and approval of exact public wording."
+  },
+  "pendingProjects": [
+    { "spokenDomain": "sabecta.com", "relationship": "Owner says it is his own project", "missing": ["Exact URL and spelling", "Description", "Status", "Role", "Assets", "Technology and outcomes if shared"] },
+    { "spokenDomain": "Marketetra.com", "relationship": "Owner says it is client work", "missing": ["Exact URL and spelling", "Actual contribution", "Permission to show client work", "Assets", "Status"] }
+  ],
+  "policy": "Do not render this draft file, guess URLs, or infer case-study facts. Owner said exact links will follow."
+}

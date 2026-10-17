@@ -2,7 +2,7 @@ export const siteIdentity = {
   primaryName: 'Habibullah',
   positioning: 'Entrepreneur, Developer & Digital Builder',
   canonicalOrigin: 'https://hellohabiib.com',
-  bio: 'Habibullah is an entrepreneur, developer and digital builder focused on turning ideas into brands, websites and digital products.',
+  bio: 'Habibullah is an entrepreneur, developer and digital builder whose journey began with a WhatsApp community that grew into a brand. His work includes personal projects and projects for clients.',
   publicAliases: [] as string[],
   verifiedSocialProfiles: [] as { platform: string; url: string }[],
   portrait: { src: '/images/habibullah-portrait.webp', width: 1122, height: 1402 } as null | { src: string; width: number; height: number },

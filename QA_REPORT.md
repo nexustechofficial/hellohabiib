@@ -63,3 +63,9 @@ The owner supplied a portrait and requested lighting matched to the site, loadin
 A root route-loading fallback initially interfered with no-JS content rendering; it was replaced with true pending-link indicators. Decorative portrait border overflow was contained. Draft detail slugs are statically gated and continue to return real 404s. All seven production browser tests passed after these corrections; 15 unit tests, lint, typecheck and build also passed. The intro replay test was additionally rerun after strengthening its hydration/first-visit synchronization.
 
 The saved Lighthouse report was refreshed against the portrait-led production build. The final seven-test production rerun passed, including WCAG 2.1 A/AA label checks. A replay button accessible-name mismatch found by Lighthouse was corrected. Staging indexing remains intentionally blocked.
+
+## Community-to-brand About update
+
+The About page now uses the owner's spoken account for a detailed introduction and four numbered journey chapters, with no invented dates or financial metrics. Homepage and Person biography reflect the community origin. Unclarified brand names, financial claims and project URLs are excluded from rendered content and retained only in draft notes.
+
+Lint, TypeScript, 15 unit tests and the production build passed. About passed overflow checks at 360, 390, 768, 1024 and 1440 pixels; all seven production browser tests passed, including automated accessibility scans. The saved Lighthouse report predates this content-only update and was not rerun for it.

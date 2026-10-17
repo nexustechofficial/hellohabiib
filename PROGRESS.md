@@ -35,3 +35,10 @@
 - Bold/extra-bold Poppins, masked staggered headline reveal, first-tab intro animation, replay button and pending-navigation feedback.
 - Intro is skippable by keyboard, does not block interaction, has a hard timeout, and is absent without JS or with reduced motion.
 - No additional project, service, social or biography claims published.
+
+## Owner's community-to-brand story
+- Expanded About with the owner's first-person account: WhatsApp community, learning while working, gradual transition into a brand, and personal/client projects.
+- Added an accessible four-chapter journey with numbered stages, not invented dates; linked the homepage teaser to /about#journey.
+- Central biography and profile structured data now consistently include the confirmed community origin.
+- Exact brand spelling, the meaning/currency/period of “six-figure,” and project/client URL/role permissions remain pending. Raw notes are isolated in src/content/drafts/owner-notes.json and never imported into public pages.
+- Owner requested Roman Urdu for questions and conversation. Website remains English per the design brief.
