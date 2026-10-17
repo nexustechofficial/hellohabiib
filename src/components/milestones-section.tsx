@@ -1,18 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Arrow } from '@/components/icons';
-import { projects } from '@/data/content';
 import { siteIdentity } from '@/data/site';
 
 export function MilestonesSection() {
   const portrait = siteIdentity.portrait;
-  const personal = projects.filter(project => project.relationship === 'Personal project');
-  const clients = projects.filter(project => project.relationship === 'Client work');
+  // Experience and business milestones supplied by the owner.
   const highlights = [
+    { value: '2Y', label: 'Experience' },
+    { value: '1,000+', label: 'Clients' },
+    { value: '50+', label: 'Brands helped grow' },
     { value: '2024', label: 'Founded Nexus Tech PK' },
-    { value: String(projects.length).padStart(2, '0'), label: 'Projects featured here' },
-    { value: String(clients.length).padStart(2, '0'), label: 'Featured client projects' },
-    { value: String(personal.length).padStart(2, '0'), label: 'Featured personal product' },
     { value: 'MERN', label: 'Full-stack development' },
     { value: 'CEO', label: 'Founder of Nexus Tech PK' },
   ];

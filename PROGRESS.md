@@ -126,3 +126,6 @@
 
 - Added a reference-inspired “Who am I” section immediately after the homepage hero, with the existing owner portrait, six highlight cards and three milestone rows. Uses confirmed March 2024 Nexus founding, founder/CEO role, MERN work and published portfolio counts (3 featured projects, 2 client projects, 1 personal product); counts are explicitly scoped to featured work. No awards, revenue, audience totals or project dates inferred from the reference. Hero scroll cue now targets milestones. Optional request for further owner milestones remains open.
 - Validation: lint, 15 unit tests, production build and all 9 browser tests passed. Additional checks verified immediate-after-hero placement, six cards, portrait loading and overflow-free layout at 320, 390, 768, 1024, 1440 and 1920px. Visually reviewed desktop and mobile section screenshots.
+
+- Replaced the three featured-project count cards with owner-supplied milestones: 2Y Experience, 1,000+ Clients and 50+ Brands helped grow. Kept Nexus founding year, MERN and founder/CEO cards. Adjusted small-screen metric sizing so the longer client total fits.
+- Lint and production build passed. Browser checks verified the exact three new values and no card/page overflow at 320, 390, 768, 1024 and 1440px.
