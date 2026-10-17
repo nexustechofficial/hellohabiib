@@ -1,3 +1,4 @@
+import { SocialSection } from '@/components/social-section';
 import { NexusSection } from '@/components/nexus-section';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,6 +24,6 @@ export default function About() {
     <section id="journey" className="wrap section personal-journey" aria-labelledby="journey-heading"><div className="section-heading"><div><span className="eyebrow"><span />THE JOURNEY / ONE STEP AT A TIME</span><h2 id="journey-heading">From a community<br />to a <em>brand.</em></h2></div><p className="journey-introduction">No overnight transformation.<br />Learning, working, and moving forward.</p></div><ol className="story-timeline">{personalStory.chapters.map(chapter => <li key={chapter.number} data-reveal><div className="timeline-marker" aria-hidden="true"><span>{chapter.number}</span></div><article className="timeline-chapter"><span className="eyebrow">{chapter.label}</span><h3>{chapter.title}</h3><p>{chapter.body}</p><div className="chapter-takeaway"><Arrow diagonal /><span>{chapter.takeaway}</span></div></article></li>)}</ol></section>
     <section className="about-lessons section" aria-labelledby="lessons-heading"><div className="wrap"><div className="section-heading"><div><span className="eyebrow"><span />WHAT I TAKE INTO THE NEXT BUILD</span><h2 id="lessons-heading">The mindset<br />behind the <em>work.</em></h2></div></div><div className="pillar-grid">{personalStory.approach.map((item, index) => <article className="pillar" key={item.title}><span className="eyebrow">0{index + 1} /</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div></div></section>
     <section className="wrap section about-next" aria-labelledby="next-heading"><div><span className="eyebrow"><span />THE STORY CONTINUES IN THE WORK</span><h2 id="next-heading">Ideas of my own.<br />Projects for <em>others.</em></h2></div><div><p>My own projects and work for clients are part of this journey too. This portfolio brings the stories together as each project is ready to share.</p><div className="about-next-links"><Link href="/projects" className="text-link">Explore my work<Arrow diagonal /></Link><Link href="/contact" className="text-link">Start a conversation<Arrow diagonal /></Link></div></div></section>
-    <ContactCta />
+    <SocialSection /><ContactCta />
   </>;
 }

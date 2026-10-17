@@ -7,7 +7,7 @@ describe('identity and publishing safety', () => {
     const schema = personSchema();
     expect(schema.name).toBe('Habibullah');
     expect(schema.url).toBe('https://hellohabiib.com');
-    expect(schema).not.toHaveProperty('sameAs');
+    expect(schema.sameAs).toEqual(['https://www.instagram.com/hellohabiib/', 'https://www.linkedin.com/in/hellohabiib/', 'https://web.facebook.com/hellohabiib/']);
     expect(schema.image).toBe('https://hellohabiib.com/images/habibullah-portrait.webp');
     expect(siteIdentity.publicAliases).toEqual(['Habib Ullah']);
     expect(schema.alternateName).toEqual(['Habib Ullah']);

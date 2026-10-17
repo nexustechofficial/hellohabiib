@@ -4,7 +4,11 @@ export const siteIdentity = {
   canonicalOrigin: 'https://hellohabiib.com',
   bio: 'Habibullah, also known as Habib Ullah, is the Founder & CEO of Nexus Tech PK, a developer and digital builder. His journey began with a WhatsApp community that grew into Nexus Tech PK. He builds brands, websites and digital products from idea to deployment.',
   publicAliases: ['Habib Ullah'] as string[],
-  verifiedSocialProfiles: [] as { platform: string; url: string }[],
+  verifiedSocialProfiles: [
+    { platform: 'Instagram', url: 'https://www.instagram.com/hellohabiib/' },
+    { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/hellohabiib/' },
+    { platform: 'Facebook', url: 'https://web.facebook.com/hellohabiib/' },
+  ],
   portrait: { src: '/images/habibullah-portrait.webp', width: 1122, height: 1402 } as null | { src: string; width: number; height: number },
   featuredVenture: {
     name: 'Nexus Tech PK',

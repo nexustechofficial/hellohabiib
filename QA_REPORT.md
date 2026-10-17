@@ -124,3 +124,7 @@ Updated homepage and default social-preview tagline to “I build what you can i
 - Search metadata uses the owner-confirmed alternate spelling; Person and Organization schema link founder and brand without assumed external URLs.
 - Lint, production build, 15 unit tests and 9 Playwright tests passed. Existing automated accessibility checks passed. Home, About and Services fit 320–1440px without horizontal overflow; homepage founder section visually reviewed.
 - Local/staging remains noindex. Production must set SITE_INDEXABLE=true before building and verify live robots/sitemap. No claim of Google indexing or ranking is made.
+
+### Personal social profiles
+
+Home/About include a dedicated three-card personal social section for the owner-supplied @hellohabiib Instagram, LinkedIn and Facebook profiles. Footer and Person sameAs also use these URLs. All cards open their exact HTTPS destinations; Organization profiles remain unchanged. Lint, 15 unit tests and build passed; responsive link/schema checks passed at 320–1440px. Eight functional browser tests passed; the accessibility test passed after removing redundant card aria-labels that omitted visible text.

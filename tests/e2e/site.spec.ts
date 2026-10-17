@@ -18,7 +18,7 @@ test('identity, styling, schema and all informational routes render',async({page
  await expect(page.locator('#nexus-tech-pk')).toContainText('Founder & CEO');
  await expect(page).toHaveTitle(/Habib Ullah.*Nexus Tech PK/);
  expect(schema['@graph'][0].alternateName).toContain('Habib Ullah');
- expect(schema['@graph'][1].name).toBe('Nexus Tech PK');expect(schema['@graph'][0].sameAs).toBeUndefined();
+ expect(schema['@graph'][1].name).toBe('Nexus Tech PK');expect(schema['@graph'][0].sameAs).toEqual(['https://www.instagram.com/hellohabiib/', 'https://www.linkedin.com/in/hellohabiib/', 'https://web.facebook.com/hellohabiib/']);
  expect(errors).toEqual([]);
 });
 
