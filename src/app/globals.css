@@ -54,3 +54,7 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 @media(max-width:768px){.brand-avatar{width:34px;height:34px;margin-right:9px}.site-footer .wordmark .brand-avatar{width:30px;height:30px;margin-right:8px}}
 @media(max-width:540px){.intro-center>.brand-avatar{width:64px;height:64px}}
 @media(prefers-reduced-motion:reduce){.intro-center>.brand-avatar{animation:none}}
+
+/* Keep the longer homepage tagline legible within the portrait composition. */
+.hero-cinematic .hero-line:last-child>em{font-size:.78em}
+@media(max-width:540px){.hero-cinematic .creative-headline{font-size:clamp(48px,15vw,81px)}}

@@ -113,3 +113,7 @@ Lint, typecheck, 15 unit tests and production build passed. A new browser flow c
 Owner requested a circular face mark in place of the H logo. Used the image-editing tool to prepare a circular avatar from the supplied portrait, then encoded small PNG/ICO assets for header/footer/intro and browser/Apple icons. The main hero portrait remains unchanged. Removed the old H SVG icon. Logo images are decorative alongside the visible Habibullah name, avoiding duplicate screen-reader labels.
 
 Lint, TypeScript, 15 unit tests and production build passed. All 9 production browser tests passed. Logo image decoding and circular styling passed at 320, 390, 768, 1024 and 1440 pixels with no horizontal overflow. PNG/ICO favicon and Apple icon responses returned 200; transparent favicon corners were verified. No Lighthouse run was added for this asset change.
+
+## Homepage tagline update
+
+Updated homepage and default social-preview tagline to “I build what you can imagine.” Preserved the three-line reveal and tuned the longer wording for mobile. Lint, typecheck, 15 unit tests, production build and all 9 browser tests passed. The exact DOM wording and absence of line clipping were separately checked at 320, 360, 390, 768, 1024, 1440 and 1920 pixels.
