@@ -72,3 +72,9 @@
 - Original PNG bytes retained in public/images/projects and referenced by project data. No recreations, recoloring or crops.
 - Home/project cards show compact, contained screenshots; project detail pages preserve source aspect ratio and offer full-size viewing. Portfolio UI stays Poppins/obsidian/orange; authentic project screenshot colors remain unchanged.
 - Browser coverage now verifies actual card/detail image loading to prevent missing-image regressions.
+
+## Three-card project gallery
+- Three equal-width cards per desktop row, two on tablet and one on mobile.
+- Shared 16:9 screenshot frames replace fixed heights and large letterboxing; original image proportions remain contained.
+- Removed role and stack rows from cards; kept description and Explore case study. Detailed role/stack remain on project pages.
+- Added restrained image hover/focus zoom with reduced-motion support.
