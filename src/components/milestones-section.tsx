@@ -20,7 +20,7 @@ export function MilestonesSection() {
       <h2 id="milestones-heading">Who <em>am I?</em></h2>
       <p className="milestones-intro">I’m Habibullah, Founder &amp; CEO of Nexus Tech PK. I build brands, websites and digital products from idea to deployment.</p>
       <div className="milestones-layout">
-        <div className="milestones-portrait">{portrait && <Image src={portrait.src} alt="Habibullah, Founder and CEO of Nexus Tech PK" width={portrait.width} height={portrait.height} sizes="(max-width: 800px) 100vw, 42vw" />}<div className="milestones-caption"><strong>Habib Ullah</strong><span>FOUNDER &amp; CEO · DIGITAL BUILDER</span></div></div>
+        <div className="milestones-portrait">{portrait && <Image src={portrait.src} alt="Habibullah, Founder and CEO of Nexus Tech PK" width={portrait.width} height={portrait.height} sizes="(max-width: 800px) 100vw, 42vw" />}<div className="milestones-caption"><strong>Habib Ullah</strong><span>FOUNDER &amp; CEO · NEXUS TECH PK</span></div></div>
         <div className="milestones-content">
           <dl className="milestone-stats">{highlights.map(item => <div key={item.label}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl>
           <ol className="milestone-highlights">
