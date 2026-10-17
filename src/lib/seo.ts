@@ -17,7 +17,7 @@ export function personSchema() {
   };
 }
 export function organizationSchema() {
-  return { '@type': 'Organization', '@id': `${siteIdentity.canonicalOrigin}/#nexus-tech-pk`, name: siteIdentity.featuredVenture.name, url: siteIdentity.featuredVenture.url, sameAs: siteIdentity.featuredVenture.socialProfiles.map(profile => profile.url), founder: { '@id': `${siteIdentity.canonicalOrigin}/#person` } };
+  return { '@type': 'Organization', '@id': `${siteIdentity.canonicalOrigin}/#nexus-tech-pk`, name: siteIdentity.featuredVenture.name, url: siteIdentity.featuredVenture.url, logo: new URL(siteIdentity.featuredVenture.logo.src, siteIdentity.canonicalOrigin).href, sameAs: siteIdentity.featuredVenture.socialProfiles.map(profile => profile.url), founder: { '@id': `${siteIdentity.canonicalOrigin}/#person` } };
 }
 export function breadcrumbSchema(items: { name: string; path: string }[]) {
   return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(item.path, siteIdentity.canonicalOrigin).href })) };

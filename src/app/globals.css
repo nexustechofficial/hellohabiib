@@ -100,3 +100,7 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 @media(max-width:700px){.social-profile-grid{grid-template-columns:1fr;gap:16px}.social-section .section-heading{align-items:start;flex-direction:column}.social-section .eyebrow{font-size:10px;letter-spacing:1px}.social-introduction{font-size:15px}.social-card-top{margin-bottom:22px}.social-profile-card h3{font-size:30px}}
 @media(prefers-reduced-motion:reduce){.social-profile-card{transition:none}.social-profile-card:hover,.social-profile-card:focus-visible{transform:none}}
 .social-logo{display:grid;place-items:center;width:56px;height:56px;border-radius:14px;flex-shrink:0}.social-logo img{display:block;width:32px;height:32px;filter:brightness(0) invert(1)}.social-logo-instagram{background:radial-gradient(circle at 30% 105%,#ffd776 0%,#f5a33b 15%,#ed365c 45%,#bf2dad 65%,#6558cf 95%)}.social-logo-linkedin{background:#0a66c2}.social-logo-facebook{background:#0866ff}
+
+/* Owner-supplied Nexus Tech PK logo, shown uncropped in its original colors. */
+.nexus-brand.nexus-brand-with-logo{padding:0;overflow:hidden;background:#0b0908}.nexus-official-logo{display:block;width:100%;height:auto;object-fit:contain}.nexus-brand-caption{display:flex;flex-direction:column;gap:14px;padding:24px 28px;border-top:1px solid #ffffff15}
+@media(max-width:700px){.nexus-brand-with-logo{max-width:480px;width:100%;margin-inline:auto}.nexus-brand-caption{padding:22px}}

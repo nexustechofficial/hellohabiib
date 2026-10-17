@@ -13,6 +13,7 @@ export const siteIdentity = {
   featuredVenture: {
     name: 'Nexus Tech PK',
     url: 'https://nexustech.pk/',
+    logo: { src: '/images/nexus-tech-pk-logo.png', width: 756, height: 766 },
     socialProfiles: [
       { platform: 'Facebook', url: 'https://web.facebook.com/nexustechdotpk/' },
       { platform: 'Instagram', url: 'https://www.instagram.com/nexustechdotpk/' },
