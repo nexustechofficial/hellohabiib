@@ -61,3 +61,8 @@
 - Elite Jobs Hub: job discovery by role/location with filtering, CV/account entry points and application-tracking messaging.
 - No screenshot revenue, customer, vacancy or other counters are published as project outcomes. No benchmark, implementation audit or live-status verification claimed.
 - Case-study flags now publish the three approved internal descriptions; gallery cards and generated sitemap use those routes. Source screenshots are visual references, not reconstructed or fabricated screenshots.
+
+## Project layout and typography refinement
+- Reduced oversized project covers to 220px desktop, 195px tablet and 185px mobile.
+- Increased project summaries to 16px, role/stack details to 12–13px, and case-study links to 14px; detail-page copy is larger too.
+- Replaced all monospace UI font declarations with the locally hosted Poppins family, including labels, timelines, captions and project metadata.

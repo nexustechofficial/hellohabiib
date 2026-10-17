@@ -83,3 +83,9 @@ Lint, typecheck, 15 unit tests and production build passed. All 8 production bro
 Added three individual project pages from the supplied homepage screenshots and confirmed end-to-end scope. Subecta covers digital subscription seller operations; Merctra covers Canadian specialty-food/global sourcing; Elite Jobs Hub covers job discovery and the applicant journey. Each includes four feature bullets, substantive purpose/experience/contribution/technical sections, and owner-confirmed MongoDB, Express.js, React and Node.js. No screenshot counters are used as real outcomes, and no runtime/implementation audit is claimed.
 
 Lint, typecheck, 15 unit tests and the production build passed. Browser coverage now includes the three published detail routes and their metadata, feature content and website links. All 8 production browser tests passed, including automated accessibility scans across all 10 informational/detail pages. Each of the three project pages passed overflow checks at 360, 390, 768, 1024 and 1440 pixels. Lighthouse was not rerun for this content expansion.
+
+## Compact covers and Poppins throughout
+
+Reduced project cover height to 220px desktop / 195px tablet / 185px mobile. Increased summaries to 16px, project role/stack text to 12–13px and destination links to 14px. Removed monospace UI font declarations in favor of locally hosted Poppins throughout labels, captions and metadata. Detail-page reading copy was also enlarged.
+
+Lint, typecheck, production build, 15 unit tests and all 8 production browser tests passed. Runtime checks on Home, About, Projects and Subecta confirmed Poppins and no horizontal overflow at widths 360, 390, 768, 1024, 1440 and 1920. Desktop measured cover height 220px, summary 16px and role 13px. Automated accessibility scans passed across all 10 informational/detail routes. Lighthouse was not rerun for this typography/layout change.
