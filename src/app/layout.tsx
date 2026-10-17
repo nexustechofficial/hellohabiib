@@ -18,5 +18,5 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image' },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body id="top"><a href="#main" className="skip-link">Skip to content</a><Header/><main id="main" tabIndex={-1}>{children}</main><Footer/></body></html>;
+  return <html lang="en" data-scroll-behavior="smooth"><body id="top"><a href="#main" className="skip-link">Skip to content</a><Header/><main id="main" tabIndex={-1}>{children}</main><Footer/></body></html>;
 }
