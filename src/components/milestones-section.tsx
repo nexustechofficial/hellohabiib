@@ -26,7 +26,7 @@ export function MilestonesSection() {
           <ol className="milestone-highlights">
             <li><div className="milestone-logo-group"><MilestoneLogo brand="nexus" /></div><div><h3>Nexus Tech PK: The beginning</h3><p>Founded to make digital products and smart solutions accessible.</p></div></li>
             <li><div className="milestone-logo-group"><MilestoneLogo brand="subecta" /></div><div><h3><Link href="/projects/subecta">Subecta<Arrow diagonal /></Link></h3><p>My subscription management platform, built from idea to deployment.</p></div></li>
-            <li><div className="milestone-logo-group"><MilestoneLogo brand="merctra" /><MilestoneLogo brand="elite-jobs-hub" /></div><div><h3>Merctra &amp; Elite Jobs Hub</h3><p>Branding, complete website development and deployment.</p></div></li>
+            <li><div className="milestone-logo-group"><MilestoneLogo brand="merctra" /></div><div><h3><Link href="/projects/merctra">Merctra<Arrow diagonal /></Link></h3><p>Global trade and sourcing website.</p></div></li><li><div className="milestone-logo-group"><MilestoneLogo brand="elite-jobs-hub" /></div><div><h3><Link href="/projects/elite-jobs-hub">Elite Jobs Hub<Arrow diagonal /></Link></h3><p>Job search and application platform.</p></div></li>
           </ol>
           <Link className="text-link" href="/about">More about me<Arrow diagonal /></Link>
         </div>

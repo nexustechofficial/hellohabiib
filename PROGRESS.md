@@ -136,3 +136,6 @@
 - Lint and production build passed. Browser checks verified four marks, removal of old labels and no overflow at 320, 390, 768 and 1440px. Reviewed desktop/mobile screenshots; automated accessibility check passed across informational routes.
 
 - Changed the milestone portrait caption from “Founder & CEO · Digital Builder” to “Founder & CEO · Nexus Tech PK” at owner request. Verified the exact text replacement and clean diff formatting.
+
+- Tightened milestone rows to a fixed 44px logo column (40px mobile), consistent text alignment and smaller row padding/gaps. Split the combined client row into separate Merctra and Elite Jobs Hub entries so each brand has one logo and a direct case-study link. Lint and production build passed; browser checks confirmed four aligned rows, equal logo sizes and no overflow at 320, 390, 768 and 1440px. Visually reviewed desktop result.
+- Requested the newly shown flat Nexus mark as a downloadable file/archive: inline image has no workspace path. Replacement remains pending; existing uploaded Nexus logo is retained until the original file arrives.
