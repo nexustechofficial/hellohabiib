@@ -148,3 +148,5 @@
 - Restored owner-preferred homepage browser title: “Habib Ullah | Entrepreneur, Developer & Digital Builder”. Updated the existing browser title assertion. Production build passed and generated homepage title was verified exactly; founder/brand content and structured data remain in place.
 
 - Removed the once-per-tab sessionStorage gate from the homepage intro. It now autoplays on homepage mount, refresh and return visits, preserving Escape/Tab skipping and reduced-motion preference handling. Lint/build passed; updated browser test verified initial autoplay, completion, autoplay after reload, manual replay, keyboard skipping and reduced-motion behavior.
+
+- Removed the homepage hero kicker “INDEPENDENT MIND. BUILDER’S INSTINCT.” and zeroed the name’s top margin so the remaining hero text moves up without a leftover gap. Production build passed; verified generated homepage no longer includes the removed line.

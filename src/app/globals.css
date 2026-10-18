@@ -142,3 +142,6 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 /* Circular logo frames with client marks overlapping by half their diameter. */
 .milestone-highlights li{grid-template-columns:66px minmax(0,1fr);gap:14px}.milestone-logo-group{width:66px;flex-basis:66px;flex-direction:row;justify-content:center;gap:0}.milestone-logo,.milestone-logo-group>.milestone-logo:only-child{border-radius:50%;outline:2px solid #181818;background:#181818}.milestone-logo-overlap{justify-content:flex-start;isolation:isolate}.milestone-logo-overlap>.milestone-logo{position:relative;z-index:1}.milestone-logo-overlap>.milestone-logo+ .milestone-logo{margin-left:-22px;z-index:2}
 @media(max-width:440px){.milestone-highlights li{grid-template-columns:60px minmax(0,1fr);gap:12px}.milestone-logo-group{width:60px;flex-basis:60px}.milestone-logo-overlap>.milestone-logo+ .milestone-logo{margin-left:-20px}}
+
+/* Hero copy starts directly with the name after removing its kicker. */
+.hero-cinematic .hero-name{margin-top:0}
