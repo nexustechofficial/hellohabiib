@@ -150,3 +150,6 @@
 - Removed the once-per-tab sessionStorage gate from the homepage intro. It now autoplays on homepage mount, refresh and return visits, preserving Escape/Tab skipping and reduced-motion preference handling. Lint/build passed; updated browser test verified initial autoplay, completion, autoplay after reload, manual replay, keyboard skipping and reduced-motion behavior.
 
 - Removed the homepage hero kicker “INDEPENDENT MIND. BUILDER’S INSTINCT.” and zeroed the name’s top margin so the remaining hero text moves up without a leftover gap. Production build passed; verified generated homepage no longer includes the removed line.
+
+- Standardized browser titles to “Page | Habib Ullah” with short Home/About/Projects/Services/Contact/Privacy names and project/service names for detail pages. Open Graph/Twitter titles now contain only the short page name. Explicit absolute page titles avoid root-page template inheritance differences. Removed visible copy hyphens (compound words now use spaces; dash separators use pipes) without changing routes, CSS selectors, URLs or technical identifiers.
+- Lint, 15 unit tests and production build passed. Browser validation across all ten published informational/detail routes verified exact browser and social titles and no visible hyphen/dash copy in main content. Updated existing homepage title assertion.

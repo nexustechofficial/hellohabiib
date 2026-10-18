@@ -3,9 +3,9 @@ import { isIndexable, siteIdentity } from '@/data/site';
 
 export function pageMetadata(title: string, description: string, path: string, publish = true): Metadata {
   return {
-    title, description, alternates: { canonical: path },
+    title: { absolute: `${title} | Habib Ullah` }, description, alternates: { canonical: path },
     robots: { index: isIndexable && publish, follow: true },
-    openGraph: { title: `${title} | Habibullah`, description, url: path, type: 'website', images: [`/opengraph-image?title=${encodeURIComponent(title)}`] },
+    openGraph: { title, description, url: path, type: 'website', images: [`/opengraph-image?title=${encodeURIComponent(title)}`] },
     twitter: { card: 'summary_large_image', title, description, images: [`/opengraph-image?title=${encodeURIComponent(title)}`] },
   };
 }

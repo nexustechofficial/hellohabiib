@@ -9,7 +9,7 @@ import { siteIdentity } from '@/data/site';
 import { personalStory } from '@/data/profile';
 import { JsonLd, pageMetadata, personSchema, organizationSchema } from '@/lib/seo';
 
-export const metadata = pageMetadata('About Habib Ullah — Founder & CEO of Nexus Tech PK', siteIdentity.bio, '/about');
+export const metadata = pageMetadata('About', siteIdentity.bio, '/about');
 
 export default function About() {
   return <>

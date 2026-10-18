@@ -17,7 +17,7 @@ test('identity, styling, schema and all informational routes render',async({page
  const schema=JSON.parse(await page.locator('script[type="application/ld+json"]').innerText());
  expect(schema['@graph'][0].name).toBe('Habibullah');
  await expect(page.locator('#nexus-tech-pk')).toContainText('Founder & CEO');
- await expect(page).toHaveTitle('Habib Ullah | Entrepreneur, Developer & Digital Builder');
+ await expect(page).toHaveTitle('Home | Habib Ullah');
  expect(schema['@graph'][0].alternateName).toContain('Habib Ullah');
  expect(schema['@graph'][1].name).toBe('Nexus Tech PK');expect(schema['@graph'][0].sameAs).toEqual(['https://www.instagram.com/hellohabiib/', 'https://www.linkedin.com/in/hellohabiib/', 'https://web.facebook.com/hellohabiib/']);
  expect(errors).toEqual([]);

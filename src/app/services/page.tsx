@@ -8,7 +8,7 @@ import { startupDeliverables, startupProcess, startupFaq } from '@/data/startup'
 import { siteIdentity } from '@/data/site';
 import { pageMetadata } from '@/lib/seo';
 
-export const metadata = pageMetadata('Brand & Startup Services', 'Build your business with Habibullah: brand identity, website development and launch preparation, from idea to deployment.', '/services');
+export const metadata = pageMetadata('Services', 'Build your business with Habibullah: brand identity, website development and launch preparation, from idea to deployment.', '/services');
 const inquiry = '/contact?service=brand-startup-launch';
 
 export default function Services() {
@@ -22,7 +22,7 @@ export default function Services() {
     </section>
     <section className="startup-about" aria-labelledby="startup-about-heading"><div className="wrap startup-about-grid" data-reveal>
       <div className="startup-founder-image">{siteIdentity.portrait && <Image src={siteIdentity.portrait.src} alt="Habibullah, the person behind the brand and website work" width={siteIdentity.portrait.width} height={siteIdentity.portrait.height} sizes="(max-width: 700px) 100vw, 420px" />}<div className="founder-image-caption"><strong>Habibullah</strong><span>ENTREPRENEUR · DEVELOPER · DIGITAL BUILDER</span></div></div>
-      <div className="startup-founder-copy"><span className="eyebrow"><span />I’VE BEEN AT THE STARTING LINE TOO</span><h2 id="startup-about-heading">From a community<br />to <em>Nexus Tech PK.</em></h2><p>I’m Habib Ullah, Founder &amp; CEO of Nexus Tech PK. My journey began with a WhatsApp community. I kept learning while working on it, and over time that community grew into Nexus Tech PK.</p><p>Today, my work includes my own products and projects for clients. I’ve taken Subecta, Merctra and Elite Jobs Hub from idea through branding, complete website development and deployment.</p><div className="startup-founder-tags"><span>Community-led beginnings</span><span>Branding + full-stack development</span><span>Idea → deployment</span></div><Link href="/about#journey" className="text-link">More About My Journey<Arrow diagonal /></Link></div>
+      <div className="startup-founder-copy"><span className="eyebrow"><span />I’VE BEEN AT THE STARTING LINE TOO</span><h2 id="startup-about-heading">From a community<br />to <em>Nexus Tech PK.</em></h2><p>I’m Habib Ullah, Founder &amp; CEO of Nexus Tech PK. My journey began with a WhatsApp community. I kept learning while working on it, and over time that community grew into Nexus Tech PK.</p><p>Today, my work includes my own products and projects for clients. I’ve taken Subecta, Merctra and Elite Jobs Hub from idea through branding, complete website development and deployment.</p><div className="startup-founder-tags"><span>Community led beginnings</span><span>Branding + full stack development</span><span>Idea → deployment</span></div><Link href="/about#journey" className="text-link">More About My Journey<Arrow diagonal /></Link></div>
     </div></section>
     <section id="startup-services" className="wrap section startup-offering" aria-labelledby="offering-heading" data-reveal>
       <div className="startup-section-heading"><span className="eyebrow"><span />THE PIECES THAT MAKE A BUSINESS</span><h2 id="offering-heading">A complete beginning.<br /><em>A connected brand.</em></h2></div>
