@@ -10,7 +10,7 @@ const marks = {
 };
 
 export function MilestoneLogo({ brand }: { brand: 'nexus' | keyof typeof marks }) {
-  if (brand === 'nexus') return <Image className="milestone-logo" src={siteIdentity.featuredVenture.logo.src} width={52} height={52} alt="" aria-hidden="true" />;
+  if (brand === 'nexus') return <Image className="milestone-logo" src={siteIdentity.featuredVenture.icon.src} width={52} height={52} alt="" aria-hidden="true" />;
   const mark = marks[brand];
   return <svg className="milestone-logo" viewBox={mark.viewBox} width="44" height="44" aria-hidden="true" focusable="false"><image href={mark.src} width={mark.width} height={mark.height} /></svg>;
 }

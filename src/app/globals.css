@@ -150,3 +150,4 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 .nexus-copy>p strong{font-weight:700;color:#f8f8f8}.nexus-site-icon{display:block;width:28px;height:28px;object-fit:contain;border-radius:7px;flex-shrink:0}.nexus-links .social-logo{width:32px;height:32px;border-radius:8px}.nexus-links .social-logo img{width:20px;height:20px}.nexus-links .text-link{gap:10px}
 /* Keep screenshot frames consistent and filled without distorting the images. */
 .project-cover.has-screenshot img{object-fit:cover;object-position:top center}
+.nexus-social-links{flex-direction:row;align-items:center;gap:10px 24px}.nexus-social-links .text-link{gap:10px}.nexus-site-icon{border-radius:50%}

@@ -21,6 +21,7 @@ export const siteIdentity = {
     ],
     url: 'https://nexustech.pk/',
     logo: { src: '/images/nexus-tech-pk-logo.png', width: 756, height: 766 },
+    icon: { src: '/images/nexus-tech-pk-icon.jpg', width: 770, height: 767 },
     socialProfiles: [
       { platform: 'Facebook', url: 'https://web.facebook.com/nexustechdotpk/' },
       { platform: 'Instagram', url: 'https://www.instagram.com/nexustechdotpk/' },
