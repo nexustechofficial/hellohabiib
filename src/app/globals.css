@@ -145,3 +145,8 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 
 /* Hero copy starts directly with the name after removing its kicker. */
 .hero-cinematic .hero-name{margin-top:0}
+
+/* Emphasize founder facts and give each brand destination its own icon. */
+.nexus-copy>p strong{font-weight:700;color:#f8f8f8}.nexus-site-icon{display:block;width:28px;height:28px;object-fit:contain;border-radius:7px;flex-shrink:0}.nexus-links .social-logo{width:32px;height:32px;border-radius:8px}.nexus-links .social-logo img{width:20px;height:20px}.nexus-links .text-link{gap:10px}
+/* Keep screenshot frames consistent and filled without distorting the images. */
+.project-cover.has-screenshot img{object-fit:cover;object-position:top center}

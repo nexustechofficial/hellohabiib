@@ -15,7 +15,7 @@ describe('identity and publishing safety', () => {
     const organization = organizationSchema();
     expect(organization.name).toBe('Nexus Tech PK');
     expect(organization.url).toBe('https://nexustech.pk/');
-    expect(organization.sameAs).toEqual(['https://web.facebook.com/nexustechdotpk/', 'https://www.instagram.com/nexustechdotpk/']);
+    expect(organization.sameAs).toEqual(['https://web.facebook.com/nexustechdotpk/', 'https://www.instagram.com/nexustechdotpk/', 'https://www.linkedin.com/company/nexustechpk']);
     expect(schema.worksFor['@id']).toBe(organization['@id']);
     expect(organization.founder['@id']).toBe(schema['@id']);
   });

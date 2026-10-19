@@ -157,3 +157,7 @@
 - Restored the homepage-only browser title “Habib Ullah | Entrepreneur, Developer & Digital Builder”, preserving short titles for all other pages. Updated existing browser assertion. Production build passed; generated Home and About titles verified.
 
 - Owner refined homepage title to “Habib Ullah | Entrepreneur, Developer & Brand Builder”. Updated root default, homepage override and existing browser assertion. Build passed and exact generated title verified.
+
+- Bolded Habibullah, March 2024 and Asia and beyond in the shared Nexus section. Replaced generic CEO sentence with the confirmed WhatsApp-community origin story. Added the uploaded Nexus logo as a website-link icon and replaced the startup-services link with the supplied Nexus Tech PK LinkedIn page and its platform glyph. Added that company URL to Organization sameAs, separate from personal LinkedIn.
+- Updated project screenshot cards to fill their consistent 16:9 frames using undistorted cover sizing anchored at the top; slight edge cropping replaces letterboxing, while full original screenshots remain on case-study pages.
+- Lint, 15 unit tests, production build and all 9 browser tests passed. Additional Home/About/Projects/Services checks verified highlighted text, correct LinkedIn link, website icon, cover sizing and no overflow at 320–1440px. Visually reviewed Nexus and project-gallery screenshots. Changes are not deployed to the user's VPS by this workspace.

@@ -24,6 +24,7 @@ export const siteIdentity = {
     socialProfiles: [
       { platform: 'Facebook', url: 'https://web.facebook.com/nexustechdotpk/' },
       { platform: 'Instagram', url: 'https://www.instagram.com/nexustechdotpk/' },
+      { platform: 'LinkedIn', url: 'https://www.linkedin.com/company/nexustechpk' },
     ],
   },
   contact: null as null | { email: string; whatsapp?: string },
