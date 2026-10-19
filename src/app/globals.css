@@ -163,3 +163,7 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 @media(max-width:380px){.home-chapter-strip a{font-size:8px;gap:4px}.founder-step-list{grid-template-columns:1fr}.founder-step-number{margin-bottom:18px}}
 @media(prefers-reduced-motion:reduce){.founder-offering-card,.founder-card-mark,.home-chapter-strip a .arrow{transition:none}.founder-offering-card:hover,.founder-offering-card:focus-visible,.founder-offering-card:hover .founder-card-mark,.home-chapter-strip a:hover .arrow{transform:none}}
 .founder-card-mark>.arrow{width:68px;height:68px;vertical-align:middle}
+
+/* Slightly larger text for the two homepage hero buttons. */
+.hero-cinematic .hero-actions .button{font-size:16px}
+@media(max-width:540px){.hero-cinematic .hero-actions .button{font-size:14px}}
