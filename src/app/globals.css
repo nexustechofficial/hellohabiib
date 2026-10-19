@@ -196,3 +196,18 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 }
 @media(max-width:360px){.hero-cinematic .hero-actions{grid-template-columns:1fr}.home-chapter-strip a{font-size:9px}.home-chapter-strip a>span{font-size:9px}}
 @media(hover:none),(pointer:coarse){.founder-offering-card:hover,.startup-service-card:hover,.button:hover{transform:none}.project-card:hover .project-cover.has-screenshot img{transform:none}}
+
+/* Deliberate mobile link groups instead of uneven wrapped underlines. */
+@media(max-width:700px){
+  .nexus-public-links{display:grid;grid-template-columns:minmax(0,1fr);gap:0;margin-top:24px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#ffffff03}
+  .nexus-public-links>.text-link{display:flex;width:100%;min-height:54px;gap:12px;padding:12px 15px;font-size:14px;border-bottom:0}
+  .nexus-public-links>.text-link+.text-link{border-top:1px solid var(--border)}
+  .nexus-public-links>.text-link>.arrow{margin-left:auto;flex-shrink:0;width:18px;height:18px}
+  .nexus-public-links>.text-link:hover{background:#ffffff04}
+  .nexus-links.nexus-social-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px;width:100%;align-items:stretch}
+  .nexus-social-links>.text-link{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:9px;min-width:0;min-height:92px;padding:14px 5px;border:1px solid var(--border);border-radius:12px;font-size:12px;line-height:1.4;background:#ffffff03;text-align:center}
+  .nexus-social-links>.text-link>.arrow{display:none}
+  .nexus-social-links>.text-link:hover{border-color:#ff795c80;background:#ff481f08}
+  .nexus-social-links .social-logo{width:30px;height:30px;border-radius:8px}
+  .nexus-social-links .social-logo img{width:19px;height:19px}
+}
