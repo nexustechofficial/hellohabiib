@@ -128,3 +128,9 @@ Updated homepage and default social-preview tagline to “I build what you can i
 ### Personal social profiles
 
 Home/About include a dedicated three-card personal social section for the owner-supplied @hellohabiib Instagram, LinkedIn and Facebook profiles. Footer and Person sameAs also use these URLs. All cards open their exact HTTPS destinations; Organization profiles remain unchanged. Lint, 15 unit tests and build passed; responsive link/schema checks passed at 320–1440px. Eight functional browser tests passed; the accessibility test passed after removing redundant card aria-labels that omitted visible text.
+
+### Approved portfolio-first homepage
+
+The homepage now moves from personal introduction to selected projects, Nexus Tech PK founder story, startup services and process. Original hero tagline is unchanged. Chapter links support browsing; cards use restrained hover movement and existing progressive GSAP reveals, with reduced-motion fallbacks and content visible without JavaScript. Three service areas use approved startup deliverables, and the final process link preselects the startup inquiry type. The contact form still honestly reports unavailable delivery when settings are absent.
+
+Lint, 15 unit tests, build and all nine browser tests passed. Additional responsive/flow checks passed at 320–1920px; desktop/mobile screenshots visually reviewed. Final SVG launch mark verified after build. Live VPS was not updated.
