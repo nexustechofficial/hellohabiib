@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { identityKeywords, pageSeo } from '@/data/seo';
 import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
@@ -12,7 +13,8 @@ import { isIndexable, siteIdentity } from '@/data/site';
 export const metadata: Metadata = {
   metadataBase: new URL(siteIdentity.canonicalOrigin),
   title: { default: 'Habib Ullah | Entrepreneur, Developer & Brand Builder', template: '%s | Habib Ullah' },
-  description: siteIdentity.bio,
+  description: pageSeo['/'].description,
+  keywords: [...identityKeywords, ...pageSeo['/'].keywords],
   robots: { index: isIndexable, follow: true },
   openGraph: { siteName: 'Habibullah', locale: 'en_US', type: 'website', images: ['/opengraph-image'] },
   twitter: { card: 'summary_large_image' },

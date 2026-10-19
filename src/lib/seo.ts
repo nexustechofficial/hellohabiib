@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
+import { identityKeywords, pageSeo } from '@/data/seo';
 import { isIndexable, siteIdentity } from '@/data/site';
 
 export function pageMetadata(title: string, description: string, path: string, publish = true): Metadata {
+  const page = pageSeo[path];
+  const metaDescription = page?.description ?? description;
+  const keywords = [...new Set([...identityKeywords, ...(page?.keywords ?? [title])])];
   return {
-    title: { absolute: `${title} | Habib Ullah` }, description, alternates: { canonical: path },
+    title: { absolute: `${title} | Habib Ullah` }, description: metaDescription, keywords, alternates: { canonical: path },
     robots: { index: isIndexable && publish, follow: true },
-    openGraph: { title, description, url: path, type: 'website', images: [`/opengraph-image?title=${encodeURIComponent(title)}`] },
-    twitter: { card: 'summary_large_image', title, description, images: [`/opengraph-image?title=${encodeURIComponent(title)}`] },
+    openGraph: { title, description: metaDescription, url: path, type: 'website', images: [`/opengraph-image?title=${encodeURIComponent(title)}`] },
+    twitter: { card: 'summary_large_image', title, description: metaDescription, images: [`/opengraph-image?title=${encodeURIComponent(title)}`] },
   };
 }
 export function personSchema() {

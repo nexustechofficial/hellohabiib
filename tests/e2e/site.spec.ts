@@ -4,9 +4,17 @@ const valid={name:'Test Person',email:'test@example.com',company:'',projectType:
 
 test('identity, styling, schema and all informational routes render',async({page})=>{
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
+ const descriptions=new Set<string>();
  for(const path of ['/','/about','/projects','/services','/contact','/privacy','/projects/subecta','/projects/merctra','/projects/elite-jobs-hub','/services/brand-startup-launch']){
   const response=await page.goto(path);expect(response?.status()).toBe(200);
   await expect(page.locator('main h1')).toHaveCount(1);
+  const description=await page.locator('meta[name="description"]').getAttribute('content');
+  expect(description?.length).toBeGreaterThan(100);
+  expect(description?.length).toBeLessThanOrEqual(180);
+  expect(descriptions.has(description!)).toBe(false);descriptions.add(description!);
+  await expect(page.locator('meta[name="keywords"]')).toHaveAttribute('content',/Habib Ullah.*Nexus Tech PK/);
+  await expect(page.locator('meta[property="og:description"]')).toHaveAttribute('content',description!);
+  await expect(page.locator('meta[name="twitter:description"]')).toHaveAttribute('content',description!);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content',/noindex/);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href',`https://hellohabiib.com${path==='/'?'':path}`);
  }
