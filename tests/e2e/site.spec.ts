@@ -136,3 +136,33 @@ test('startup service leads from founder story to scoped inquiry',async({page})=
  await expect(page.locator('h1')).toHaveText('Brand & Startup Launch');
  await page.getByRole('link',{name:'Discuss this project'}).click();await expect(page.locator('#projectType')).toHaveValue('brand-startup-launch');
 });
+
+test('desktop cursor follows the mouse without blocking links and respects motion preferences',async({page})=>{
+ await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});
+ await page.goto('/about');const cursor=page.locator('.cursor-effect');
+ await expect(page.getByRole('button',{name:'Open navigation',includeHidden:true})).toBeEnabled();
+ await page.mouse.move(400,250);await expect(cursor).toBeVisible();
+ const link=page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Projects',exact:true});
+ await link.hover();await expect(cursor).toHaveAttribute('data-active','true');
+ expect(await cursor.evaluate(el=>getComputedStyle(el).pointerEvents)).toBe('none');
+ await link.click();await expect(page).toHaveURL(/\/projects$/);
+ await page.keyboard.press('Tab');await expect(cursor).toBeHidden();
+ await page.mouse.move(500,300);await expect(cursor).toBeVisible();
+ await page.emulateMedia({reducedMotion:'reduce'});await expect(cursor).toBeHidden();
+});
+
+test('phone touch navigation, filters and inquiry fields remain usable',async({browser})=>{
+ const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'});const page=await context.newPage();
+ await page.goto('/');await expect(page.locator('.cursor-effect')).toBeHidden();
+ for(const button of await page.locator('.hero-actions a').all()){const box=await button.boundingBox();expect(box?.height).toBeGreaterThanOrEqual(44);}
+ await page.getByRole('button',{name:'Open navigation'}).tap();
+ await page.getByRole('navigation',{name:'Mobile navigation'}).getByRole('link',{name:/Projects/}).tap();
+ await expect(page).toHaveURL(/\/projects$/);
+ await page.getByRole('button',{name:'Client work',exact:true}).tap();await expect(page.locator('.project-card')).toHaveCount(2);
+ await page.goto('/contact');
+ for(const field of await page.locator('.field input,.field select,.field textarea').all())expect(parseFloat(await field.evaluate(el=>getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(16);
+ await page.locator('#name').fill('Mobile visitor');await page.locator('#email').fill('mobile@example.com');
+ await page.getByRole('button',{name:'Check Inquiry'}).tap();await expect(page.locator('#details')).toHaveAttribute('aria-invalid','true');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await context.close();
+});

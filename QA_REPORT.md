@@ -134,3 +134,11 @@ Home/About include a dedicated three-card personal social section for the owner-
 The homepage now moves from personal introduction to selected projects, Nexus Tech PK founder story, startup services and process. Original hero tagline is unchanged. Chapter links support browsing; cards use restrained hover movement and existing progressive GSAP reveals, with reduced-motion fallbacks and content visible without JavaScript. Three service areas use approved startup deliverables, and the final process link preselects the startup inquiry type. The contact form still honestly reports unavailable delivery when settings are absent.
 
 Lint, 15 unit tests, build and all nine browser tests passed. Additional responsive/flow checks passed at 320–1920px; desktop/mobile screenshots visually reviewed. Final SVG launch mark verified after build. Live VPS was not updated.
+
+### Cursor effect and phone responsiveness
+
+Global pointer decoration follows the mouse on desktop, expands over interactive elements and never intercepts clicks or replaces the native cursor. Touch/coarse input, small screens and reduced-motion settings disable it; keyboard and blur hide it. Animation updates stop at rest and cleanup cancels listeners/frames.
+
+Phone improvements include larger tap targets, 16px form fields, readable copy, narrower-width hero button stacking and scrollable landscape navigation. Existing progressive enhancement and no-JavaScript navigation remain available. Main tagline is unchanged.
+
+Final lint, typecheck, 15 unit tests, build and 11 browser tests passed. All 10 public routes fit 320, 360, 390, 430 and 768px in Chromium touch emulation. Desktop cursor interaction/reduced-motion, touch filters/form validation and 667×320 landscape menu navigation passed. Mobile Home/Contact screenshots reviewed. Physical Safari/iPhone/Android testing remains outside this validation. No VPS deployment performed.

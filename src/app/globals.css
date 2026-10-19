@@ -167,3 +167,32 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
 /* Slightly larger text for the two homepage hero buttons. */
 .hero-cinematic .hero-actions .button{font-size:16px}
 @media(max-width:540px){.hero-cinematic .hero-actions .button{font-size:14px}}
+
+/* Decorative mouse follower; native pointer and touch interactions stay intact. */
+.cursor-effect{position:fixed;inset:0;z-index:90;pointer-events:none;overflow:hidden;contain:strict}.cursor-effect[hidden]{display:none}.cursor-position{position:absolute;left:0;top:0;transform:translate3d(var(--cursor-x,-200px),var(--cursor-y,-200px),0);will-change:transform}.cursor-glow,.cursor-ring,.cursor-dot{position:absolute;display:block;left:0;top:0;pointer-events:none;transform:translate(-50%,-50%);border-radius:50%}.cursor-glow{width:150px;height:150px;background:radial-gradient(circle,#ff481f0c,transparent 68%)}.cursor-ring{width:34px;height:34px;border:1px solid #ff795c80;transition:width .18s,height .18s,background .18s,border-color .18s}.cursor-dot{width:4px;height:4px;background:#ff795c}.cursor-effect[data-active=true] .cursor-ring{width:54px;height:54px;background:#ff481f08;border-color:#ff947bb3}.cursor-effect[data-pressed=true] .cursor-ring{width:25px;height:25px}
+@media(hover:none),(pointer:coarse),(max-width:768px),(prefers-reduced-motion:reduce){.cursor-effect{display:none!important}}
+
+/* Phone layouts: readable type, comfortable taps and room for browser zoom. */
+@media(max-width:768px){
+  .mobile-menu{overflow-y:auto;overscroll-behavior:contain;max-height:calc(100dvh - 95px);padding-bottom:max(24px,env(safe-area-inset-bottom))}
+  .filters button,.text-link{min-height:44px}.filters button{font-size:14px}
+  .footer-links a,.footer-bottom>a{display:inline-flex;align-items:center;min-height:44px}
+  .case-meta{gap:20px 28px}.case-meta>div{min-width:0;overflow-wrap:anywhere}
+  .case-figure figcaption{flex-wrap:wrap;font-size:13px}.case-figure figcaption>a{min-height:44px;display:inline-flex;align-items:center}
+}
+@media(max-width:540px){
+  .hero-cinematic .hero-actions{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:10px;width:100%}
+  .hero-cinematic .hero-actions .button{min-width:0;min-height:50px;padding:14px 10px;font-size:14px;gap:9px;white-space:normal;text-align:center}
+  .hero-cinematic .hero-name{font-size:22px}.hero-name>span{font-size:10px}
+  .hero-cinematic .hero-description{font-size:16px;line-height:1.8;max-width:100%}
+  .home-chapter-strip .wrap{display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:8px;padding-block:14px}.home-chapter-strip a{font-size:10px;line-height:1.6;letter-spacing:0;min-height:44px;gap:5px}.home-chapter-strip a>span{font-size:10px}
+  .page-intro h1{font-size:clamp(34px,9vw,48px);overflow-wrap:break-word}.page-intro .eyebrow{font-size:10px;letter-spacing:1px}
+  .field label{font-size:14px}.field input,.field select,.field textarea{font-size:16px;min-height:50px}.field-error{font-size:12px}.form-notice{font-size:13px}.consent{font-size:12px;line-height:1.8}.form-footer .button{font-size:15px;min-height:50px}.form-status{font-size:14px}
+  .project-card-meta h3{font-size:25px}.project-card-meta>span{font-size:13px}.project-card>p{font-size:16px;line-height:1.8}.project-destination{font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+  .reading p,.reading li{font-size:16px;line-height:1.85}.reading h2{font-size:29px;overflow-wrap:break-word}.reading h3{font-size:23px}
+  .startup-actions .button{font-size:14px;min-height:50px}.startup-actions{align-items:stretch}.startup-actions>.button{flex:1 1 180px}
+  .startup-founder-copy>p,.startup-service-card>p,.startup-process p,.startup-faq details>p{font-size:15px}.startup-faq summary{font-size:16px;min-height:44px;align-items:center}.startup-founder-tags>span{font-size:12px}
+  .nexus-public-links,.nexus-social-links{gap:8px 18px}.nexus-copy>p{font-size:16px}.nexus-public-links .text-link,.nexus-social-links .text-link{font-size:14px;min-height:48px}
+}
+@media(max-width:360px){.hero-cinematic .hero-actions{grid-template-columns:1fr}.home-chapter-strip a{font-size:9px}.home-chapter-strip a>span{font-size:9px}}
+@media(hover:none),(pointer:coarse){.founder-offering-card:hover,.startup-service-card:hover,.button:hover{transform:none}.project-card:hover .project-cover.has-screenshot img{transform:none}}
