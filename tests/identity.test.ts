@@ -7,7 +7,7 @@ describe('identity and publishing safety', () => {
     const schema = personSchema();
     expect(schema.name).toBe('Habibullah');
     expect(schema.url).toBe('https://hellohabiib.com');
-    expect(schema.sameAs).toEqual(['https://www.instagram.com/hellohabiib/', 'https://www.linkedin.com/in/hellohabiib/', 'https://web.facebook.com/hellohabiib/']);
+    expect(schema.sameAs).toEqual(['https://www.instagram.com/hellohabiib/', 'https://www.linkedin.com/in/hellohabiib/', 'https://web.facebook.com/hellohabiib/', 'https://whatsapp.com/channel/0029VabyTRfLI8YXR4Vzax2Y']);
     expect(schema.image).toBe('https://hellohabiib.com/images/habibullah-portrait.webp');
     expect(siteIdentity.publicAliases).toEqual(['Habib Ullah']);
     expect(schema.alternateName).toEqual(['Habib Ullah']);
@@ -15,7 +15,7 @@ describe('identity and publishing safety', () => {
     const organization = organizationSchema();
     expect(organization.name).toBe('Nexus Tech PK');
     expect(organization.url).toBe('https://nexustech.pk/');
-    expect(organization.sameAs).toEqual(['https://web.facebook.com/nexustechdotpk/', 'https://www.instagram.com/nexustechdotpk/', 'https://www.linkedin.com/company/nexustechpk']);
+    expect(organization.sameAs).toEqual(['https://whatsapp.com/channel/0029VaVBG4n6LwHjfrQ0CI24', 'https://www.instagram.com/nexustechdotpk/', 'https://www.linkedin.com/company/nexustechpk']);
     expect(schema.worksFor['@id']).toBe(organization['@id']);
     expect(organization.founder['@id']).toBe(schema['@id']);
   });

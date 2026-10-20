@@ -8,6 +8,7 @@ export const siteIdentity = {
     { platform: 'Instagram', url: 'https://www.instagram.com/hellohabiib/' },
     { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/hellohabiib/' },
     { platform: 'Facebook', url: 'https://web.facebook.com/hellohabiib/' },
+    { platform: 'WhatsApp', url: 'https://whatsapp.com/channel/0029VabyTRfLI8YXR4Vzax2Y' },
   ],
   portrait: { src: '/images/habibullah-portrait.webp', width: 1122, height: 1402 } as null | { src: string; width: number; height: number },
   featuredVenture: {
@@ -23,12 +24,12 @@ export const siteIdentity = {
     logo: { src: '/images/nexus-tech-pk-logo.png', width: 756, height: 766 },
     icon: { src: '/images/nexus-tech-pk-icon.jpg', width: 770, height: 767 },
     socialProfiles: [
-      { platform: 'Facebook', url: 'https://web.facebook.com/nexustechdotpk/' },
+      { platform: 'WhatsApp', url: 'https://whatsapp.com/channel/0029VaVBG4n6LwHjfrQ0CI24' },
       { platform: 'Instagram', url: 'https://www.instagram.com/nexustechdotpk/' },
       { platform: 'LinkedIn', url: 'https://www.linkedin.com/company/nexustechpk' },
     ],
   },
-  contact: null as null | { email: string; whatsapp?: string },
+  contact: { email: 'habiibullah448@gmail.com' } as null | { email: string; whatsapp?: string },
 };
 
 // Production must explicitly enable indexing after content and domain review.

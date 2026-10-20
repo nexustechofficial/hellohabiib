@@ -1,12 +1,14 @@
 import { z } from 'zod';
+import { siteIdentity } from '../data/site';
 import { inquirySchema } from './validation';
 export type ContactSettings={apiKey:string;from:string;to:string;redisUrl:string;redisToken:string};
 export function contactSettings():ContactSettings|null{
  const {RESEND_API_KEY,CONTACT_EMAIL_FROM,CONTACT_EMAIL_TO,UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN}=process.env;
- if(!RESEND_API_KEY||!CONTACT_EMAIL_FROM||!CONTACT_EMAIL_TO||!UPSTASH_REDIS_REST_URL||!UPSTASH_REDIS_REST_TOKEN)return null;
- if(!z.email().safeParse(CONTACT_EMAIL_FROM).success||!z.email().safeParse(CONTACT_EMAIL_TO).success)return null;
+ const recipient=CONTACT_EMAIL_TO || siteIdentity.contact?.email;
+ if(!RESEND_API_KEY||!CONTACT_EMAIL_FROM||!recipient||!UPSTASH_REDIS_REST_URL||!UPSTASH_REDIS_REST_TOKEN)return null;
+ if(!z.email().safeParse(CONTACT_EMAIL_FROM).success||!z.email().safeParse(recipient).success)return null;
  try{if(new URL(UPSTASH_REDIS_REST_URL).protocol!=='https:')return null;}catch{return null;}
- return {apiKey:RESEND_API_KEY,from:CONTACT_EMAIL_FROM,to:CONTACT_EMAIL_TO,redisUrl:UPSTASH_REDIS_REST_URL,redisToken:UPSTASH_REDIS_REST_TOKEN};
+ return {apiKey:RESEND_API_KEY,from:CONTACT_EMAIL_FROM,to:recipient,redisUrl:UPSTASH_REDIS_REST_URL,redisToken:UPSTASH_REDIS_REST_TOKEN};
 }
 export async function deliverInquiry(input:unknown,settings:ContactSettings,fetcher:typeof fetch=fetch){
  const inquiry=inquirySchema.parse(input);

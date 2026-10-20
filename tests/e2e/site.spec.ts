@@ -27,7 +27,7 @@ test('identity, styling, schema and all informational routes render',async({page
  await expect(page.locator('#nexus-tech-pk')).toContainText('Founder & CEO');
  await expect(page).toHaveTitle('Habib Ullah | Entrepreneur, Developer & Brand Builder');
  expect(schema['@graph'][0].alternateName).toContain('Habib Ullah');
- expect(schema['@graph'][1].name).toBe('Nexus Tech PK');expect(schema['@graph'][0].sameAs).toEqual(['https://www.instagram.com/hellohabiib/', 'https://www.linkedin.com/in/hellohabiib/', 'https://web.facebook.com/hellohabiib/']);
+ expect(schema['@graph'][1].name).toBe('Nexus Tech PK');expect(schema['@graph'][0].sameAs).toEqual(['https://www.instagram.com/hellohabiib/', 'https://www.linkedin.com/in/hellohabiib/', 'https://web.facebook.com/hellohabiib/', 'https://whatsapp.com/channel/0029VabyTRfLI8YXR4Vzax2Y']);
  expect(errors).toEqual([]);
 });
 
@@ -58,7 +58,8 @@ test('unapproved content is absent and draft detail URLs really return 404',asyn
 });
 
 test('contact validates accessibly and never claims an unconfigured inquiry was sent',async({page,request})=>{
- await page.goto('/contact');await expect(page.getByRole('note')).toContainText('not configured');
+ await page.goto('/contact');await expect(page.getByRole('note')).toContainText('temporarily unavailable');
+ await expect(page.getByRole('link',{name:'Write an email',exact:true})).toHaveAttribute('href','mailto:habiibullah448@gmail.com');
  await page.getByRole('button',{name:'Check Inquiry'}).click();await expect(page.locator('#name')).toHaveAttribute('aria-invalid','true');await expect(page.getByRole('status')).toContainText('highlighted');
  const headers={Origin:'https://hellohabiib.com'};
  expect((await request.post('/api/contact',{headers,data:{}})).status()).toBe(400);

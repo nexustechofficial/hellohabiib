@@ -211,3 +211,9 @@ h1,h2,h3{font-weight:700}.wordmark{font-weight:700}.desktop-nav a,.nav-cta{font-
   .nexus-social-links .social-logo{width:30px;height:30px;border-radius:8px}
   .nexus-social-links .social-logo img{width:19px;height:19px}
 }
+
+.social-logo-whatsapp{background:#128c4a}.social-profile-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.contact-email-card{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px;border:1px solid #ff795c40;border-radius:12px;background:#ff481f05}.contact-email-card .eyebrow{font-size:10px;letter-spacing:1px}.contact-email-address{display:inline-block;font-size:clamp(16px,2vw,24px);font-weight:600;margin-top:12px;overflow-wrap:anywhere}.contact-email-address:hover{color:#ff947b}.contact-email-card .button{flex-shrink:0;font-size:14px;min-height:48px}.contact-layout-simple{gap:22px}
+@media(max-width:1000px){.social-profile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.social-profile-card{padding:22px 18px}.social-profile-card h3{font-size:clamp(20px,5.2vw,26px);letter-spacing:-.6px}.social-profile-card .social-handle{font-size:12px;line-height:1.7}.social-profile-card .social-card-action{font-size:12px;gap:8px}.social-card-top{margin-bottom:24px}.social-profile-card .social-logo{width:46px;height:46px}.social-profile-card .social-logo img{width:27px;height:27px}.contact-email-card{flex-direction:column;align-items:stretch;padding:20px;gap:18px}.contact-email-card .button{align-self:flex-start}.contact-email-address{font-size:18px}}
+@media(max-width:360px){.social-profile-grid{grid-template-columns:1fr}}

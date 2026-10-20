@@ -142,3 +142,11 @@ Global pointer decoration follows the mouse on desktop, expands over interactive
 Phone improvements include larger tap targets, 16px form fields, readable copy, narrower-width hero button stacking and scrollable landscape navigation. Existing progressive enhancement and no-JavaScript navigation remain available. Main tagline is unchanged.
 
 Final lint, typecheck, 15 unit tests, build and 11 browser tests passed. All 10 public routes fit 320, 360, 390, 430 and 768px in Chromium touch emulation. Desktop cursor interaction/reduced-motion, touch filters/form validation and 667×320 landscape menu navigation passed. Mobile Home/Contact screenshots reviewed. Physical Safari/iPhone/Android testing remains outside this validation. No VPS deployment performed.
+
+### WhatsApp channels and approved contact inbox
+
+Personal WhatsApp channel appears alongside Instagram/LinkedIn/Facebook. Nexus uses its separate WhatsApp channel instead of Facebook. Local WhatsApp SVG and responsive four-card personal grid checked. Person/Organization sameAs entries keep the two channels separate.
+
+Contact/Privacy expose habiibullah448@gmail.com through direct mailto links. Server delivery defaults to that recipient but still requires Resend API key, verified sender and Redis configuration. Owner confirmed those accounts are not ready; no automatic email sending or live inbox test is claimed. Missing configuration still returns unavailable rather than success.
+
+Lint, typecheck, build, 16 unit tests and 11 browser tests passed. Exact URLs, loaded icons, email target and responsive Home/About/Contact layouts checked at 320–1440px; mobile captures reviewed. No VPS deployment or real email performed.

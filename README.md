@@ -43,7 +43,7 @@ Copy `.env.example` into local environment settings without committing secrets. 
 
 - `RESEND_API_KEY`: server-only Resend key, destination `api.resend.com`.
 - `CONTACT_EMAIL_FROM`: verified Resend sender mailbox; a plain email address.
-- `CONTACT_EMAIL_TO`: owner-approved recipient mailbox.
+- `CONTACT_EMAIL_TO`: optional recipient override; defaults to the owner-approved habiibullah448@gmail.com.
 - `UPSTASH_REDIS_REST_URL`: exact HTTPS REST endpoint for your Redis instance.
 - `UPSTASH_REDIS_REST_TOKEN`: server-only token for that endpoint.
 
@@ -99,3 +99,12 @@ These changes help search engines understand the person and brand; crawling, ind
 Journal is temporarily removed: its listing and article routes return 404, navigation omits it, and it is excluded from the sitemap. Article data types remain available for future work.
 
 The “Who am I?” milestone section is saved but not rendered on the homepage. To restore it, import `MilestonesSection` from `@/components/milestones-section` in `src/app/page.tsx` and render `<MilestonesSection/>` after the hero. Its logo component, original assets and CSS remain in place. Optionally change the hero scroll cue back to `#milestones`.
+
+
+### Contact email and channel update
+
+The public contact inbox is `habiibullah448@gmail.com`. The Contact page provides a direct `mailto:` link that opens the visitor’s email app; the visitor still presses Send in that app. This works independently of server email delivery.
+
+Automatic inquiry delivery remains unavailable until the VPS `.env.local` contains `RESEND_API_KEY`, a Resend-verified `CONTACT_EMAIL_FROM`, `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`. `CONTACT_EMAIL_TO` defaults to the approved Gmail inbox, or can be set explicitly as shown in `.env.example`. Verify the sender domain in Resend; a recipient Gmail address does not authorize Gmail as a Resend sender. Keep existing environment entries such as `SITE_INDEXABLE=true`, do not commit credentials, and restart the `hellohabiib` service after setting server credentials. Then send an owner-approved test inquiry and confirm inbox receipt; provider acceptance alone does not prove inbox delivery. No live email was sent or VPS configuration changed in this update.
+
+The personal WhatsApp channel is separate from the Nexus Tech PK channel. Personal Facebook remains in the personal profile section; the Nexus section now uses its WhatsApp channel instead of Facebook.

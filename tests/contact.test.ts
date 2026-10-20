@@ -18,6 +18,16 @@ describe('inquiry validation', () => {
   });
 });
 describe('delivery contract (mock provider, no real email sent)', () => {
+  it('uses the approved inbox by default once sender and rate-limit settings exist', async () => {
+    for (const [key, value] of Object.entries({ RESEND_API_KEY: 'test-only', CONTACT_EMAIL_FROM: 'website@example.com', CONTACT_EMAIL_TO: '', UPSTASH_REDIS_REST_URL: 'https://example.com', UPSTASH_REDIS_REST_TOKEN: 'test-only' })) vi.stubEnv(key, value);
+    const configured = contactSettings();
+    expect(configured?.to).toBe('habiibullah448@gmail.com');
+    const mock = vi.fn().mockResolvedValue(new Response(JSON.stringify({ id: 'accepted-test' })));
+    await deliverInquiry(valid, configured!, mock);
+    expect(JSON.parse(mock.mock.calls[0][1].body).to).toEqual(['habiibullah448@gmail.com']);
+    vi.stubEnv('RESEND_API_KEY', '');
+    expect(contactSettings()).toBeNull();
+  });
   it('requires provider acceptance and uses plain-text content and a fixed subject', async () => {
     const mock = vi.fn().mockResolvedValue(new Response(JSON.stringify({ id: 'accepted-test' }), { status: 200 }));
     expect(await deliverInquiry({ ...valid, details: '<script>test</script> is plain text in this inquiry.' }, settings, mock)).toBe('accepted-test');
