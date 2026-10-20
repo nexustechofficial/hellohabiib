@@ -190,3 +190,7 @@
 - Updated Contact metadata and Privacy copy. Verified lint, production build, 16 unit tests and 11 browser tests (including accessibility). Contact has no horizontal overflow at 320, 360, 390, 430, 768 and 1440px; reviewed a mobile screenshot. No live messages sent or VPS deployment performed.
 
 - Updated WhatsApp icon backgrounds and floating/chat buttons to brand green #25D366 with white logo; contact button text stays dark for readability. Personal WhatsApp card now reads Habib Ullah in place of My WhatsApp channel. Lint and production build passed.
+
+
+- Added `/llms.txt` and `/llms-full.txt`: short site index plus expanded public content and canonical page hierarchy, generated at build time from shared identity, profile, approved project/service and SEO data. Includes personal versus company channels, direct contact, case-study scope caveats and current privacy summary; excludes drafts and operational secrets. Corrected the published pricing FAQ's stale inquiry-form reference to email/WhatsApp.
+- Validation: lint, 16 unit tests and production build passed. Both new endpoints returned 200 with UTF-8 text/plain; checked required identity/project/contact facts and all 36 internal-link references against production locally (all 200). No VPS deployment performed.

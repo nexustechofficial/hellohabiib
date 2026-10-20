@@ -112,3 +112,7 @@ The personal WhatsApp channel is separate from the Nexus Tech PK channel. Person
 
 ### Current direct-contact interface
 Contact has no form: visitors use email, WhatsApp chat, Instagram, LinkedIn, Facebook or the personal WhatsApp channel. Header Let’s Talk and the floating button open WhatsApp with different suggested messages to +92 335 5302803. Visitors review and send messages themselves. Resend/Upstash setup is unnecessary for this interface; the retained backend instructions above only apply if the form is restored later.
+
+
+### LLM-readable public documentation
+`/llms.txt` is a concise Markdown reading guide and `/llms-full.txt` expands the public biography, journey, venture, approved case studies, startup deliverables/process/FAQ, contact, privacy summary and page structure. Both are UTF-8 plain-text static Route Handlers built from `src/lib/llms.ts` and the shared content collections, so published content updates regenerate them during a production build. Only published/approved collections are included; editorial backlog and credentials are excluded. These discovery documents do not replace robots.txt or guarantee AI indexing. No visitor-facing navigation or visual layout is changed.

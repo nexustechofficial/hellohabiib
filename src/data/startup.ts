@@ -19,6 +19,6 @@ export const startupProcess = [
 export const startupFaq = [
   { question: 'Can we start if I only have an idea?', answer: 'Yes. The starting conversation can focus on your idea, who it is for and what you need to launch. You do not need to arrive with a finished identity or website brief.' },
   { question: 'Can I work with you on just branding or a website?', answer: 'The scope can be discussed around your starting point. Tell me what already exists and what you need help with so we can agree the right deliverables.' },
-  { question: 'What does a startup launch project cost?', answer: 'A quote depends on the agreed branding, website requirements and launch assets. Share your idea and priorities through the inquiry form to discuss the scope. No fixed package prices are published here.' },
+  { question: 'What does a startup launch project cost?', answer: 'A quote depends on the agreed branding, website requirements and launch assets. Share your idea and priorities by email or WhatsApp to discuss the scope. No fixed package prices are published here.' },
   { question: 'Is hosting, advertising spend or ongoing support included?', answer: 'Third party costs, account ownership and any support period should be agreed explicitly before work begins. The project scope will identify what is included and what you need to arrange separately.' },
 ];
