@@ -188,3 +188,5 @@
 - Removed the public contact form. Contact now provides email, direct WhatsApp chat and all four approved personal social profiles. No email-service credentials are required for this interface; the existing unused form component/API remain available for future work.
 - Added an accessible bottom-right WhatsApp button across pages and changed desktop/mobile header Let’s Talk to the approved 923355302803 number. Header, floating and Contact links have distinct suggested messages; service referrals retain their context. Nothing sends automatically.
 - Updated Contact metadata and Privacy copy. Verified lint, production build, 16 unit tests and 11 browser tests (including accessibility). Contact has no horizontal overflow at 320, 360, 390, 430, 768 and 1440px; reviewed a mobile screenshot. No live messages sent or VPS deployment performed.
+
+- Updated WhatsApp icon backgrounds and floating/chat buttons to brand green #25D366 with white logo; contact button text stays dark for readability. Personal WhatsApp card now reads Habib Ullah in place of My WhatsApp channel. Lint and production build passed.
