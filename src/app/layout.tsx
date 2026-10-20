@@ -7,6 +7,7 @@ import '@fontsource/poppins/700.css';
 import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/900.css';
 import './globals.css';
+import { WhatsAppButton } from '@/components/whatsapp-button';
 import { CursorEffect } from '@/components/cursor-effect';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/layout';
@@ -21,5 +22,5 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image' },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en" data-scroll-behavior="smooth"><body id="top"><a href="#main" className="skip-link">Skip to content</a><Header/><main id="main" tabIndex={-1}>{children}</main><Footer/><CursorEffect/></body></html>;
+  return <html lang="en" data-scroll-behavior="smooth"><body id="top"><a href="#main" className="skip-link">Skip to content</a><Header/><main id="main" tabIndex={-1}>{children}</main><Footer/><WhatsAppButton/><CursorEffect/></body></html>;
 }

@@ -19,11 +19,11 @@ export const pageSeo: Record<string, { description: string; keywords: string[] }
     keywords: ['startup services', 'brand identity', 'logo design', 'website development', 'business launch'],
   },
   '/contact': {
-    description: 'Contact Habib Ullah, Founder & CEO of Nexus Tech PK, about branding, website development, digital products or a potential project collaboration.',
+    description: 'Contact Habib Ullah by email or WhatsApp about your next project. Find his Instagram, LinkedIn, Facebook and WhatsApp channel in one place.',
     keywords: ['contact Habib Ullah', 'project inquiry', 'branding inquiry', 'website development inquiry'],
   },
   '/privacy': {
-    description: 'Read how Habib Ullah’s portfolio website handles contact form information, email delivery, spam prevention, external links and privacy requests.',
+    description: 'Read how Habib Ullah’s portfolio website handles direct email and WhatsApp contact, external social links, hosting information and privacy requests.',
     keywords: ['Habib Ullah privacy policy', 'contact form privacy', 'inquiry information'],
   },
   '/projects/subecta': {

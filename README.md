@@ -108,3 +108,7 @@ The public contact inbox is `habiibullah448@gmail.com`. The Contact page provide
 Automatic inquiry delivery remains unavailable until the VPS `.env.local` contains `RESEND_API_KEY`, a Resend-verified `CONTACT_EMAIL_FROM`, `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`. `CONTACT_EMAIL_TO` defaults to the approved Gmail inbox, or can be set explicitly as shown in `.env.example`. Verify the sender domain in Resend; a recipient Gmail address does not authorize Gmail as a Resend sender. Keep existing environment entries such as `SITE_INDEXABLE=true`, do not commit credentials, and restart the `hellohabiib` service after setting server credentials. Then send an owner-approved test inquiry and confirm inbox receipt; provider acceptance alone does not prove inbox delivery. No live email was sent or VPS configuration changed in this update.
 
 The personal WhatsApp channel is separate from the Nexus Tech PK channel. Personal Facebook remains in the personal profile section; the Nexus section now uses its WhatsApp channel instead of Facebook.
+
+
+### Current direct-contact interface
+Contact has no form: visitors use email, WhatsApp chat, Instagram, LinkedIn, Facebook or the personal WhatsApp channel. Header Let’s Talk and the floating button open WhatsApp with different suggested messages to +92 335 5302803. Visitors review and send messages themselves. Resend/Upstash setup is unnecessary for this interface; the retained backend instructions above only apply if the form is restored later.

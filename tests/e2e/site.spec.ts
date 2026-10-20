@@ -57,10 +57,11 @@ test('unapproved content is absent and draft detail URLs really return 404',asyn
  const image=await request.get('/opengraph-image?title=About%20Habibullah');expect(image.status()).toBe(200);expect(image.headers()['content-type']).toContain('image/png');
 });
 
-test('contact validates accessibly and never claims an unconfigured inquiry was sent',async({page,request})=>{
- await page.goto('/contact');await expect(page.getByRole('note')).toContainText('temporarily unavailable');
+test('contact offers direct channels and retained API fails safely without configuration',async({page,request})=>{
+ await page.goto('/contact');await expect(page.locator('main form,main input,main textarea,main select')).toHaveCount(0);
+ await expect(page.getByRole('navigation',{name:'Habib Ullah social profiles'}).getByRole('link')).toHaveCount(4);
+ const messages=[];for(const selector of ['.nav-cta','.whatsapp-float','.contact-whatsapp']){const url=new URL((await page.locator(selector).getAttribute('href'))!);expect(url.origin+url.pathname).toBe('https://wa.me/923355302803');expect(url.searchParams.get('text')).toContain('Hi Habib!');messages.push(url.searchParams.get('text'));}expect(new Set(messages).size).toBe(3);
  await expect(page.getByRole('link',{name:'Write an email',exact:true})).toHaveAttribute('href','mailto:habiibullah448@gmail.com');
- await page.getByRole('button',{name:'Check Inquiry'}).click();await expect(page.locator('#name')).toHaveAttribute('aria-invalid','true');await expect(page.getByRole('status')).toContainText('highlighted');
  const headers={Origin:'https://hellohabiib.com'};
  expect((await request.post('/api/contact',{headers,data:{}})).status()).toBe(400);
  const unavailable=await request.post('/api/contact',{headers,data:valid});expect(unavailable.status()).toBe(503);expect((await unavailable.json()).error).toContain('not been sent');
@@ -135,7 +136,7 @@ test('startup service leads from founder story to scoped inquiry',async({page})=
  await page.locator('.startup-faq summary').first().click();await expect(page.locator('.startup-faq details').first()).toHaveAttribute('open','');
  await page.getByRole('link',{name:'See the service scope'}).click();await expect(page).toHaveURL(/\/services\/brand-startup-launch$/);
  await expect(page.locator('h1')).toHaveText('Brand & Startup Launch');
- await page.getByRole('link',{name:'Discuss this project'}).click();await expect(page.locator('#projectType')).toHaveValue('brand-startup-launch');
+ await page.getByRole('link',{name:'Discuss this project'}).click();expect(new URL((await page.locator('.contact-whatsapp').getAttribute('href'))!).searchParams.get('text')).toContain('Brand & Startup Launch');
 });
 
 test('desktop cursor follows the mouse without blocking links and respects motion preferences',async({page})=>{
@@ -152,7 +153,7 @@ test('desktop cursor follows the mouse without blocking links and respects motio
  await page.emulateMedia({reducedMotion:'reduce'});await expect(cursor).toBeHidden();
 });
 
-test('phone touch navigation, filters and inquiry fields remain usable',async({browser})=>{
+test('phone touch navigation, filters and direct contact remain usable',async({browser})=>{
  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'});const page=await context.newPage();
  await page.goto('/');await expect(page.locator('.cursor-effect')).toBeHidden();
  for(const button of await page.locator('.hero-actions a').all()){const box=await button.boundingBox();expect(box?.height).toBeGreaterThanOrEqual(44);}
@@ -161,9 +162,9 @@ test('phone touch navigation, filters and inquiry fields remain usable',async({b
  await expect(page).toHaveURL(/\/projects$/);
  await page.getByRole('button',{name:'Client work',exact:true}).tap();await expect(page.locator('.project-card')).toHaveCount(2);
  await page.goto('/contact');
- for(const field of await page.locator('.field input,.field select,.field textarea').all())expect(parseFloat(await field.evaluate(el=>getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(16);
- await page.locator('#name').fill('Mobile visitor');await page.locator('#email').fill('mobile@example.com');
- await page.getByRole('button',{name:'Check Inquiry'}).tap();await expect(page.locator('#details')).toHaveAttribute('aria-invalid','true');
+ await expect(page.locator('main form')).toHaveCount(0);
+ await expect(page.locator('.contact-social-links a')).toHaveCount(4);
+ for(const link of await page.locator('.contact-whatsapp,.whatsapp-float').all())expect((await link.boundingBox())?.height).toBeGreaterThanOrEqual(44);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await context.close();
 });

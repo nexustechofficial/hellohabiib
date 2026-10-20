@@ -29,7 +29,7 @@ export const siteIdentity = {
       { platform: 'LinkedIn', url: 'https://www.linkedin.com/company/nexustechpk' },
     ],
   },
-  contact: { email: 'habiibullah448@gmail.com' } as null | { email: string; whatsapp?: string },
+  contact: { email: 'habiibullah448@gmail.com', whatsapp: '923355302803' } as null | { email: string; whatsapp?: string },
 };
 
 // Production must explicitly enable indexing after content and domain review.

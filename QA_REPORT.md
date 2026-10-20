@@ -150,3 +150,9 @@ Personal WhatsApp channel appears alongside Instagram/LinkedIn/Facebook. Nexus u
 Contact/Privacy expose habiibullah448@gmail.com through direct mailto links. Server delivery defaults to that recipient but still requires Resend API key, verified sender and Redis configuration. Owner confirmed those accounts are not ready; no automatic email sending or live inbox test is claimed. Missing configuration still returns unavailable rather than success.
 
 Lint, typecheck, build, 16 unit tests and 11 browser tests passed. Exact URLs, loaded icons, email target and responsive Home/About/Contact layouts checked at 320–1440px; mobile captures reviewed. No VPS deployment or real email performed.
+
+
+## Direct contact update — 2026-10-20
+- Removed the public contact form. Contact now provides email, direct WhatsApp chat and all four approved personal social profiles. No email-service credentials are required for this interface; the existing unused form component/API remain available for future work.
+- Added an accessible bottom-right WhatsApp button across pages and changed desktop/mobile header Let’s Talk to the approved 923355302803 number. Header, floating and Contact links have distinct suggested messages; service referrals retain their context. Nothing sends automatically.
+- Updated Contact metadata and Privacy copy. Verified lint, production build, 16 unit tests and 11 browser tests (including accessibility). Contact has no horizontal overflow at 320, 360, 390, 430, 768 and 1440px; reviewed a mobile screenshot. No live messages sent or VPS deployment performed.
